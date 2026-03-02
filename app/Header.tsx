@@ -13,7 +13,7 @@ export default function Header() {
 
   const shareTitle = "덕후테스트 - 최애 작품 덕력을 증명하세요!";
   const shareDescription = "애니, 영화, 게임 등 다양한 분야의 진정한 덕후를 가려냅니다. 당신의 덕력을 뽐내보세요.";
-  const shareUrl = `${SITE_URL}${pathname}`;
+  const shareUrl = SITE_URL;
 
   const handleKakaoShare = () => {
     if (typeof window !== 'undefined' && window.Kakao && window.Kakao.isInitialized()) {
@@ -22,7 +22,7 @@ export default function Header() {
         content: {
           title: shareTitle,
           description: shareDescription,
-          imageUrl: `${SITE_URL}/logo.png?v=2`,
+          imageUrl: `${SITE_URL}/og.png?v=3`,
           link: {
             mobileWebUrl: shareUrl,
             webUrl: shareUrl,

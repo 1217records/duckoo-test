@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState, useRef } from "react";
-import { Download, MessageCircle, Instagram, Twitter, Share2 } from 'lucide-react';
+import { Download, MessageCircle, Instagram, Twitter, Share2, ClipboardCheck } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { useToast } from '../Toast';
 
@@ -283,31 +283,89 @@ export default function ResultClient() {
 
           <div className="certificate-container">
 
-            <section className="certificate premium-cert" ref={certificateRef}>
-              <div className="cert-inner">
-                <div className="cert-header">
-                  <p className="certLabel">OFFICIAL CERTIFICATE</p>
-                  <h2>덕후 인증서</h2>
-                </div>
-
-                <div className="cert-body">
-                  <p style={{ fontSize: '16px', color: '#64748b', marginBottom: '8px', marginTop: '0' }}>수여자</p>
-                  <p style={{ fontSize: '28px', fontWeight: 800, color: '#4f46e5', marginBottom: '24px', marginTop: '0' }}>{result.player}</p>
-
-                  <div className="cert-score-area">
-                    <p className="certScore">{result.score}<span>점</span></p>
-                    <p className="certRank">{getRank(result.score, result.themeId)}</p>
+            <section
+              className="certificate premium-cert"
+              ref={certificateRef}
+              style={{
+                width: '100%',
+                maxWidth: '450px',
+                aspectRatio: '1 / 1',
+                margin: '0 auto 40px auto',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                padding: '16px'
+              }}
+            >
+              <div
+                className="cert-inner"
+                style={{
+                  position: 'relative',
+                  zIndex: 1,
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '24px'
+                }}
+              >
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: 0.08,
+                    zIndex: -1,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <div style={{
+                    backgroundColor: '#4f46e5',
+                    borderRadius: '50%',
+                    width: '350px',
+                    height: '350px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                    <ClipboardCheck size={180} color="white" strokeWidth={1.5} />
                   </div>
+                </div>
 
-                  <div className="cert-details">
-                    <p>{result.totalCount}문제 중 <strong>{result.correct}</strong>개 정답</p>
-                    <p className="detail-points">({result.rawPoints}/{result.totalPoints}점)</p>
+                <div style={{ marginBottom: '24px', textAlign: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+                    <div style={{ height: '2px', width: '24px', backgroundColor: '#4f46e5', opacity: 0.5, marginRight: '12px' }} />
+                    <p style={{ fontSize: '13px', fontWeight: 800, color: '#4f46e5', letterSpacing: '0.2em', margin: 0 }}>OFFICIAL CERTIFICATE</p>
+                    <div style={{ height: '2px', width: '24px', backgroundColor: '#4f46e5', opacity: 0.5, marginLeft: '12px' }} />
                   </div>
+                  <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f172a', letterSpacing: '0.15em', margin: 0, textShadow: '1px 1px 2px rgba(0,0,0,0.05)' }}>덕후 인증서</h2>
                 </div>
 
-                <div className="cert-footer" style={{ justifyContent: 'center' }}>
-                  <div className="cert-stamp">DUCKOO TEST</div>
+                <div style={{
+                  backgroundColor: '#eef2ff',
+                  padding: '12px 32px',
+                  borderRadius: '16px',
+                  display: 'inline-block',
+                  marginBottom: '24px',
+                  border: '2px solid #c7d2fe',
+                  boxShadow: '0 4px 12px rgba(79, 70, 229, 0.1)',
+                  textAlign: 'center'
+                }}>
+                  <p style={{ fontSize: '28px', fontWeight: 900, color: '#4f46e5', margin: 0, letterSpacing: '0.05em' }}>{result.player}</p>
                 </div>
+
+                <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+                  <p className="certScore" style={{ fontSize: '64px', margin: 0 }}>{result.score}<span style={{ fontSize: '24px' }}>점</span></p>
+                  <p className="certRank" style={{ fontSize: '24px', marginTop: '8px', margin: 0 }}>{getRank(result.score, result.themeId)}</p>
+                </div>
+
               </div>
             </section>
 
