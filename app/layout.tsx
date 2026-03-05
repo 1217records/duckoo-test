@@ -23,6 +23,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3939831601648260"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body>
         <Script
           async
@@ -38,12 +46,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-8FRKH2L3HB');
           `}
         </Script>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3939831601648260"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <ToastProvider>
           <KakaoInit />
           <Header />
