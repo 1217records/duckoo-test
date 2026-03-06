@@ -799,9 +799,14 @@ p {
   background: white;
   /* Solid background for clean capture */
   border-radius: 16px;
-  padding: 12px;
-  margin-bottom: 24px;
+  padding: 16px;
+  margin: 0 auto 24px auto;
   width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border: none;
   position: relative;
@@ -1344,7 +1349,8 @@ p {
   }
 
   .premium-cert {
-    padding: 4px;
+    padding: 8px;
+    overflow: visible;
   }
 
   .cert-inner {
@@ -1414,6 +1420,21 @@ p {
   border-bottom-right-radius: 0 !important;
   border-bottom: none !important;
   margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .result-shell {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .result-panel {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
 body:has(.result-shell) .footer {

@@ -286,16 +286,6 @@ export default function ResultClient() {
             <section
               className="certificate premium-cert"
               ref={certificateRef}
-              style={{
-                width: '100%',
-                maxWidth: '450px',
-                aspectRatio: '1 / 1',
-                margin: '0 auto 40px auto',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                padding: '16px'
-              }}
             >
               <div
                 className="cert-inner"
