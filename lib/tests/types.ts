@@ -17,4 +17,9 @@ export interface Theme {
   accent: string;
   questionCount: number;
   questions: Question[];
+  // ✏️ 카카오톡/검색엔진 공유 시 표시되는 제목과 설명
+  seo: {
+    title: string;
+    description: string;
+  };
 }
