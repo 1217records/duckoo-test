@@ -244,6 +244,53 @@ export default function HomeClient() {
               </>
             )}
           </article>
+
+          {/* Diablo 2 Test Card */}
+          <article
+            className={`themeCard highlighted-card accordion-card diablo2-card ${activeTheme === 'diablo2' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'diablo2' ? null : 'diablo2')}
+            style={{ "--primary-color": "#9f1414" } as React.CSSProperties}
+          >
+            {activeTheme !== 'diablo2' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                디아블로 2 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header diablo2-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #dc2626, #7f1d1d)' }}><Flame size={12} className="icon-left" />NEW</span>
+                  <h2 className="accordion-title">디아블로 2 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    성역의 수호자여! D2 + LoD + 악마술사의 군림 DLC까지 포함! 룬워드, 클래스, 보스 지식을 완벽히 검증합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-diablo2"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 네팔렘)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton diablo2-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("diablo2"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
         </section>
 
         {/* How It Works Section */}

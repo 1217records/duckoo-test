@@ -1,0 +1,782 @@
+[
+    {
+        "id": 1,
+        "question": "디아블로 2의 최종 보스 이름은?",
+        "options": [
+            "디아블로",
+            "바알",
+            "메피스토",
+            "듀리엘"
+        ],
+        "answerIndex": 1,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 2,
+        "question": "디아블로 2 기본 클래스가 아닌 것은?",
+        "options": [
+            "드루이드",
+            "소서리스",
+            "네크로맨서",
+            "팔라딘"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 3,
+        "question": "디아블로 2의 게임 난이도 3단계 순서는?",
+        "options": [
+            "노멀 → 나이트메어 → 헬",
+            "노멀 → 헬 → 나이트메어",
+            "이지 → 노멀 → 하드",
+            "노멀 → 하드 → 인페르노"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 4,
+        "question": "액트 1의 첫 번째 퀘스트 보스는?",
+        "options": [
+            "안다리엘",
+            "블러드레이븐",
+            "트리스트럼",
+            "카운테스"
+        ],
+        "answerIndex": 1,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 5,
+        "question": "확장팩 Lord of Destruction에서 추가된 액트는?",
+        "options": [
+            "액트 5",
+            "액트 6",
+            "액트 4",
+            "액트 3"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 6,
+        "question": "팔라딘의 대표적인 오라 스킬은?",
+        "options": [
+            "오로라",
+            "해머딘",
+            "블레스드 해머",
+            "컨센트레이션"
+        ],
+        "answerIndex": 3,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 7,
+        "question": "소서리스의 세 가지 스킬 트리 원소는?",
+        "options": [
+            "파이어/콜드/라이트닝",
+            "파이어/콜드/포이즌",
+            "파이어/라이트닝/아케인",
+            "콜드/라이트닝/카오스"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 8,
+        "question": "액트 2의 용병이 기본적으로 사용하는 무기 종류는?",
+        "options": [
+            "창(폴암)",
+            "칼",
+            "활",
+            "도끼"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 9,
+        "question": "디아블로 2에서 캐릭터의 최대 레벨은?",
+        "options": [
+            "99",
+            "100",
+            "85",
+            "120"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 10,
+        "question": "게임 내에서 마을 간 이동에 사용하는 시스템은?",
+        "options": [
+            "웨이포인트",
+            "포탈",
+            "텔레포트",
+            "맵 이동"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 11,
+        "question": "'비밀 소 레벨'에 접근하기 위해 필요한 아이템은?",
+        "options": [
+            "위트의 다리 + 타운 포탈 책",
+            "호라드릭 큐브 + 룬",
+            "열쇠 세트",
+            "바알의 눈"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 12,
+        "question": "네크로맨서가 소환하는 대표적인 하수인은?",
+        "options": [
+            "스켈레톤",
+            "골렘",
+            "좀비",
+            "임프"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 13,
+        "question": "액트 3의 배경 지역은?",
+        "options": [
+            "쿠라스트 정글",
+            "루트 골레인 사막",
+            "하로가스 산",
+            "트리스트럼"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 14,
+        "question": "아이템의 등급이 아닌 것은?",
+        "options": [
+            "에픽",
+            "노멀",
+            "매직",
+            "레어"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 15,
+        "question": "디아블로 2에서 호라드릭 큐브를 얻을 수 있는 액트는?",
+        "options": [
+            "액트 2",
+            "액트 1",
+            "액트 3",
+            "액트 4"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 16,
+        "question": "바바리안의 대표 스킬 '워 크라이'의 효과는?",
+        "options": [
+            "주변 적 공포 상태",
+            "공격력 증가",
+            "방어력 증가",
+            "체력 회복"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 17,
+        "question": "아마존이 사용하는 주요 무기 두 종류는?",
+        "options": [
+            "창과 활",
+            "검과 방패",
+            "도끼와 창",
+            "활과 석궁"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 18,
+        "question": "액트 4의 보스로 등장하는 악마의 이름은?",
+        "options": [
+            "디아블로",
+            "메피스토",
+            "바알",
+            "안다리엘"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 19,
+        "question": "디아블로 2 레저렉션(D2R)에서 추가된 8번째 클래스는?",
+        "options": [
+            "악마술사(Warlock)",
+            "마법사",
+            "성기사",
+            "수도사"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 20,
+        "question": "'악마술사의 군림' DLC의 출시 시기는?",
+        "options": [
+            "2026년 2월",
+            "2025년 12월",
+            "2024년 6월",
+            "2023년 9월"
+        ],
+        "answerIndex": 0,
+        "difficulty": "하",
+        "points": 4
+    },
+    {
+        "id": 21,
+        "question": "룬워드 '인피니티(Infinity)'에 필요한 룬 조합은?",
+        "options": [
+            "Ber-Mal-Ber-Ist",
+            "Jah-Ith-Ber",
+            "Sur-Lo-Sol-Eth",
+            "Ber-Ber-Jah-Jah"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 22,
+        "question": "액트 2의 보스 듀리엘의 특징은?",
+        "options": [
+            "콜드 오라 + 극강의 물리 공격",
+            "파이어 공격 + 소환",
+            "독 공격 + 텔레포트",
+            "라이트닝 + 분열"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 23,
+        "question": "호라드릭 큐브로 3개의 같은 등급 보석을 합치면?",
+        "options": [
+            "한 단계 높은 등급의 같은 보석",
+            "랜덤 보석",
+            "노말 보석",
+            "유니크 보석"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 24,
+        "question": "우버 트리스트럼에서 싸우는 보스 3명은?",
+        "options": [
+            "판데모니엄 디아블로/바알/메피스토",
+            "안다리엘/듀리엘/메피스토",
+            "디아블로/릴리스/이즈웰",
+            "바알/듀리엘/안다리엘"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 25,
+        "question": "룬워드를 만들기 위해 아이템에 필요한 조건은?",
+        "options": [
+            "정확한 소켓 수의 노멀/슈페리어 아이템",
+            "매직 아이템",
+            "레어 아이템",
+            "유니크 아이템"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 26,
+        "question": "소서리스 텔레포트 스킬이 속한 스킬 트리는?",
+        "options": [
+            "라이트닝",
+            "콜드",
+            "파이어",
+            "마스터리"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 27,
+        "question": "룬워드 '스피릿(Spirit)'에 필요한 룬 조합은?",
+        "options": [
+            "Tal-Thul-Ort-Amn",
+            "Hel-Ko-Thul-Eth",
+            "Ral-Tir-Tal-Sol",
+            "Eth-Tir-Lo-Nef"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 28,
+        "question": "'카운테스'가 룬을 드롭하는 최대 개수는?(헬 난이도)",
+        "options": [
+            "3개",
+            "1개",
+            "5개",
+            "2개"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 29,
+        "question": "어쌔신의 트랩 스킬 중 라이트닝 센트리를 강화하는 궁극기는?",
+        "options": [
+            "라이트닝 센트리",
+            "데쓰 센트리",
+            "웨이크 오브 파이어",
+            "블레이드 퓨리"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 30,
+        "question": "메피스토가 위치한 던전 이름은?",
+        "options": [
+            "드란스 레어 레벨 3",
+            "어지유스 탑",
+            "아칸 생츄어리",
+            "두란스 오브 헤이트 레벨 3"
+        ],
+        "answerIndex": 3,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 31,
+        "question": "악마술사(Warlock)의 세 가지 스킬 트리는?",
+        "options": [
+            "Demon/Eldritch/Chaos",
+            "Fire/Ice/Dark",
+            "Summon/Curse/Demon",
+            "Shadow/Blood/Chaos"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 32,
+        "question": "악마술사의 핵심 능력은?",
+        "options": [
+            "악마를 소환하고 결속하여 힘을 흡수",
+            "성스러운 빛으로 악마를 정화",
+            "자연의 힘으로 변신",
+            "시간을 조종하여 공격"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 33,
+        "question": "D2R '악마술사의 군림'에서 추가된 엔드게임 콘텐츠는?",
+        "options": [
+            "거대 고대인(Colossal Ancients)",
+            "그레이터 리프트",
+            "우버 릴리스",
+            "판데모니엄 이벤트 2"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 34,
+        "question": "드루이드의 두 가지 소환 형태는?",
+        "options": [
+            "늑대/곰 변신",
+            "사자/독수리 변신",
+            "곰/호랑이 변신",
+            "늑대/박쥐 변신"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 35,
+        "question": "3대 공포의 군주(Prime Evils)가 아닌 것은?",
+        "options": [
+            "안다리엘",
+            "디아블로",
+            "메피스토",
+            "바알"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 36,
+        "question": "비밀 소 레벨의 보스 이름은?",
+        "options": [
+            "카우 킹",
+            "소 여왕",
+            "암소 대왕",
+            "카우 로드"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 37,
+        "question": "D2R DLC에서 추가된 편의 기능이 아닌 것은?",
+        "options": [
+            "자동 전투 시스템",
+            "공식 루트 필터",
+            "스택형 보관함",
+            "룬 전용 보관함"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 38,
+        "question": "액트 5 하로가스의 NPC 중 소켓 추가 퀘스트를 주는 NPC는?",
+        "options": [
+            "라주크",
+            "안야",
+            "퀘일-케크",
+            "니흘라삭"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 39,
+        "question": "룬워드 '엔리그마(Enigma)'를 장착하면 얻는 핵심 스킬은?",
+        "options": [
+            "텔레포트",
+            "오크 세이지",
+            "배틀 오더",
+            "패내티시즘"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 40,
+        "question": "테러 존(Terror Zone)의 특징은?",
+        "options": [
+            "특정 구역의 몬스터 레벨이 캐릭터 레벨에 맞춰 상승",
+            "보스만 강화됨",
+            "아이템 드롭률 2배",
+            "경험치 획득 불가"
+        ],
+        "answerIndex": 0,
+        "difficulty": "중",
+        "points": 5
+    },
+    {
+        "id": 41,
+        "question": "룬워드 '그리프(Grief)'가 강력한 이유는?",
+        "options": [
+            "+데미지가 무기 기본 데미지에 추가되기 때문",
+            "공격 속도가 무한이기 때문",
+            "모든 저항을 무시하기 때문",
+            "생명력 흡수가 100%이기 때문"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 42,
+        "question": "하이 룬 'Ber'의 번호는?",
+        "options": [
+            "#30",
+            "#25",
+            "#28",
+            "#33"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 43,
+        "question": "'스매쉬터(Smiter)' 팔라딘이 우버를 잡을 때 핵심 스킬 조합은?",
+        "options": [
+            "스마이트 + 패내티시즘 + 라이프 탭",
+            "블레스드 해머 + 컨센트레이션",
+            "제알 + 매디테이션",
+            "홀리 쉴드 + 생츄어리"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 44,
+        "question": "우버 디아블로(디클론)를 소환하는 조건은?",
+        "options": [
+            "서버에 조던의 반지를 대량 판매",
+            "3개의 열쇠로 포탈 개방",
+            "헬 바알 100회 클리어",
+            "호라드릭 큐브에 특수 조합"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 45,
+        "question": "룬워드 '자뷸라(Jah-Ber)'로 만드는 룬워드 '인피니티'에서 제공하는 핵심 오라는?",
+        "options": [
+            "컨빅션",
+            "패내티시즘",
+            "메디테이션",
+            "소니"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 46,
+        "question": "유니크 작은 부적 '안니힐러스(Annihilus)'의 드롭 조건은?",
+        "options": [
+            "우버 디아블로(디클론) 처치",
+            "우버 트리스트럼 클리어",
+            "바알 헬 난이도 클리어",
+            "카운테스 100회 사냥"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 47,
+        "question": "FCR(Faster Cast Rate) 소서리스 라이트닝 빌드의 최대 브레이크포인트는?",
+        "options": [
+            "117%",
+            "105%",
+            "125%",
+            "200%"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 48,
+        "question": "IAS(Increased Attack Speed) 브레이크포인트가 적용되는 방식은?",
+        "options": [
+            "프레임 단위로 단계적 적용",
+            "퍼센트에 비례하여 선형 적용",
+            "무기별 고정 속도",
+            "레벨에 따라 자동 증가"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 49,
+        "question": "헬 난이도에서 모든 캐릭터에게 적용되는 저항 패널티는?",
+        "options": [
+            "-100",
+            "-50",
+            "-75",
+            "-150"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 50,
+        "question": "유니크 대형 부적 '헬파이어 토치'에 붙는 랜덤 클래스 스킬은?",
+        "options": [
+            "랜덤 클래스 +3 스킬",
+            "고정 +2 올 스킬",
+            "랜덤 +1~5 스킬",
+            "소서리스 전용 +3"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 51,
+        "question": "액트 2 용병의 '홀리 프리즈' 오라는 어떤 난이도/타입에서 고용해야 하는가?",
+        "options": [
+            "나이트메어 디펜시브",
+            "노멀 컴뱃",
+            "헬 오펜시브",
+            "나이트메어 오펜시브"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 52,
+        "question": "룬워드 '콜 투 암즈(Call to Arms)'의 핵심 부여 스킬은?",
+        "options": [
+            "배틀 커맨드 + 배틀 오더",
+            "워 크라이 + 쉬버 아머",
+            "텔레포트 + 오크 세이지",
+            "홀리 쉴드 + 클린싱"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 53,
+        "question": "악마술사(Warlock)의 'Demon' 스킬 트리의 핵심 메커니즘은?",
+        "options": [
+            "악마 소환 및 결속",
+            "원소 마법 시전",
+            "근접 물리 강화",
+            "아군 버프 오라"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 54,
+        "question": "악마술사의 'Chaos' 스킬 트리의 특징은?",
+        "options": [
+            "혼돈의 힘으로 적을 제어하고 파괴",
+            "얼음 마법 특화",
+            "체력 흡수 및 회복",
+            "은신과 암살"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 55,
+        "question": "'거대 고대인(Colossal Ancients)' 전투의 특징은?",
+        "options": [
+            "궁극의 엔드게임 보스 전투",
+            "PvP 전용 콘텐츠",
+            "레벨링 전용 던전",
+            "랜덤 퀘스트 이벤트"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 56,
+        "question": "노멀 아이템에 소켓을 추가하는 호라드릭 큐브 레시피의 공식은?",
+        "options": [
+            "Ral + Amn + 퍼펙트 자수정 + 노멀 무기",
+            "Tal + Thul + 퍼펙트 토파즈 + 노멀 방패",
+            "El + Eld + 차입드 젬 + 노멀 방패",
+            "모든 답이 아이템 종류에 따라 다르다"
+        ],
+        "answerIndex": 3,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 57,
+        "question": "유니크 룬워드 '이니그마(Enigma)'의 룬 조합은?",
+        "options": [
+            "Jah-Ith-Ber",
+            "Ber-Mal-Ber-Ist",
+            "Lo-Mal-Ral",
+            "Sur-Lo-Sol-Eth"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 58,
+        "question": "매직 파인드(MF)의 수확 체감 법칙에서 유니크 아이템 기준 실효 MF 공식은?",
+        "options": [
+            "MF*250/(MF+250)",
+            "MF/2",
+            "MF*100/(MF+100)",
+            "MF 그대로 적용"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 59,
+        "question": "디아블로 2에서 '이더리얼(Ethereal)' 아이템의 특징은?",
+        "options": [
+            "수리 불가하지만 기본 스탯이 50% 높음",
+            "수리 비용이 2배",
+            "거래 불가",
+            "내구도가 무한"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    },
+    {
+        "id": 60,
+        "question": "D2R DLC에서 악마술사가 악마를 '잡아먹는' 능력의 효과는?",
+        "options": [
+            "악마의 생명력을 흡수",
+            "악마를 영구 하수인으로 변환",
+            "악마의 스킬을 복제",
+            "악마의 아이템을 드롭시킴"
+        ],
+        "answerIndex": 0,
+        "difficulty": "상",
+        "points": 7
+    }
+]

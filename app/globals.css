@@ -634,6 +634,18 @@ p {
   filter: brightness(1.1);
 }
 
+/* Base button appearance for Diablo 2 */
+.accordion-card:not(.expanded).diablo2-card {
+  background: linear-gradient(135deg, #dc2626, #7f1d1d);
+  box-shadow: 0 4px 14px rgba(159, 20, 20, 0.3);
+}
+
+.accordion-card:not(.expanded).diablo2-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(159, 20, 20, 0.4);
+  filter: brightness(1.1);
+}
+
 /* Expanded State Styles */
 .accordion-card.expanded {
   background: var(--surface-color);

@@ -59,6 +59,16 @@ function getRank(score: number, themeId: string): string {
     return "포켓몬 마스터";
   }
 
+  if (themeId === "diablo2") {
+    if (score <= 20) return "노멀 모험가";
+    if (score <= 40) return "나이트메어 생존자";
+    if (score <= 60) return "헬 정복자";
+    if (score <= 75) return "룬워드 장인";
+    if (score <= 89) return "우버 헌터";
+    if (score <= 99) return "네팔렘";
+    return "성역의 수호자";
+  }
+
   // Default (One Piece)
   if (score <= 24) return "이스트 블루 루키";
   if (score <= 49) return "위대한 항로 모험가";
@@ -134,7 +144,22 @@ const THEME_META: Record<string, {
     ],
     otherThemes: [
       { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
+      { id: "diablo2", name: "디아블로 2 덕후 테스트", emoji: "🔥", desc: "성역의 수호자를 검증합니다! D2 + 악마술사 DLC", color: "#9f1414" },
+    ],
+  },
+  diablo2: {
+    emoji: "🔥",
+    color: "#9f1414",
+    gradient: "linear-gradient(135deg, #dc2626, #7f1d1d)",
+    hashtags: ["#디아블로2덕후테스트", "#덕후테스트", "#디아블로2", "#Diablo2", "#D2R"],
+    links: [
+      { label: "디아블로 2 나무위키", url: "https://namu.wiki/w/%EB%94%94%EC%95%84%EB%B8%94%EB%A1%9C%202", desc: "디아블로 2 세계관·아이템·클래스 나무위키" },
+      { label: "D2R 공식 사이트", url: "https://diablo2.blizzard.com", desc: "디아블로 2 레저렉션 공식 홈페이지" },
+      { label: "Maxroll D2R", url: "https://maxroll.gg/d2", desc: "D2R 빌드·가이드·룬워드 데이터베이스" },
+    ],
+    otherThemes: [
       { id: "lol", name: "리그 오브 레전드 테스트", emoji: "⚔️", desc: "소환사의 협곡에서 펼쳐지는 지식 배틀!", color: "#c8aa6e" },
+      { id: "pokemon", name: "포켓몬스터 덕후 테스트", emoji: "🎮", desc: "1~2세대 관동·성도 지방! 포켓몬 마스터를 가려냅니다.", color: "#16a34a" },
     ],
   },
 };
