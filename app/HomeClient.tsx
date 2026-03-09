@@ -291,6 +291,53 @@ export default function HomeClient() {
               </>
             )}
           </article>
+
+          {/* Solo Leveling Test Card */}
+          <article
+            className={`themeCard highlighted-card accordion-card sololeveling-card ${activeTheme === 'sololeveling' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'sololeveling' ? null : 'sololeveling')}
+            style={{ "--primary-color": "#4c1d95" } as React.CSSProperties}
+          >
+            {activeTheme !== 'sololeveling' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                나 혼자만 레벨업 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header sololeveling-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #6d28d9, #312e81)' }}>웹툰/애니</span>
+                  <h2 className="accordion-title">나 혼자만 레벨업 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    성진우와 그림자 군단의 이야기! 등장인물, 헌터 랭킹, 세계관의 심층 지식을 검증합니다. 당신도 그림자 군주가 될 수 있을까요?
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-sololeveling"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 성진우, 이그리트)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton sololeveling-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("sololeveling"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
         </section>
 
         {/* How It Works Section */}

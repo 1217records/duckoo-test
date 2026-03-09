@@ -49,7 +49,7 @@ export default function AboutPage() {
 
         <section className="intro-hero">
           <h2>&ldquo;당신의 덕력은 어느 정도인가요?&rdquo;</h2>
-          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
+          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2, 나 혼자만 레벨업 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
         </section>
 
         {/* 서비스 철학 섹션 */}
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <section className="content-section card-base-styles">
           <h2>📚 현재 제공 중인 테스트 테마</h2>
           <p style={{ marginBottom: '24px', lineHeight: 1.8, color: 'var(--secondary-text-color)' }}>
-            현재 다섯 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
+            현재 여섯 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
           </p>
           <div className="theme-overview-list">
             <div className="theme-overview-item">
@@ -146,6 +146,11 @@ export default function AboutPage() {
               <div className="theme-overview-badge diablo2-badge" style={{ background: 'linear-gradient(135deg, #dc2626, #7f1d1d)', color: 'white' }}>NEW/게임</div>
               <h3>🔥 디아블로 2 (Diablo II + LoD + Warlock DLC)</h3>
               <p>성역의 수호자여! 디아블로 2 레저렉션과 최근 출시된 악마술사의 군림 DLC까지, 룬어(룬워드), 클래스 스킬트리, 우버 보스 등 하드코어한 지식을 모았습니다. 등급: 노멀 모험가 → 나이트메어 생존자 → 헬 정복자 → 우버 헌터 → 네팔렘 → 성역의 수호자</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge sololeveling-badge" style={{ background: 'linear-gradient(135deg, #6d28d9, #312e81)', color: 'white' }}>NEW/애니</div>
+              <h3>🗡️ 나 혼자만 레벨업 (Solo Leveling)</h3>
+              <p>전 세계를 휩쓴 K-웹툰/애니메이션의 전설! 성진우와 그림자 군단의 서사, 헌터 랭킹 및 세계관의 심층 지식을 검증합니다. 등급: E급 헌터 → C급 헌터 → A급 헌터 → S급 헌터 → 국가 권력급 → 그림자 군주</p>
             </div>
           </div>
         </section>

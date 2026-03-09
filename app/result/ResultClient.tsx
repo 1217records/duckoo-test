@@ -59,6 +59,15 @@ function getRank(score: number, themeId: string): string {
     return "포켓몬 마스터";
   }
 
+  if (themeId === "sololeveling") {
+    if (score <= 24) return "E급 헌터";
+    if (score <= 49) return "C급 헌터";
+    if (score <= 69) return "A급 헌터";
+    if (score <= 84) return "S급 헌터";
+    if (score <= 94) return "국가 권력급";
+    return "그림자 군주";
+  }
+
   if (themeId === "diablo2") {
     if (score <= 24) return "노멀 모험가";
     if (score <= 49) return "나이트메어 생존자";
@@ -159,6 +168,21 @@ const THEME_META: Record<string, {
     otherThemes: [
       { id: "lol", name: "리그 오브 레전드 테스트", emoji: "⚔️", desc: "소환사의 협곡에서 펼쳐지는 지식 배틀!", color: "#c8aa6e" },
       { id: "pokemon", name: "포켓몬스터 덕후 테스트", emoji: "🎮", desc: "1~2세대 관동·성도 지방! 포켓몬 마스터를 가려냅니다.", color: "#16a34a" },
+    ],
+  },
+  sololeveling: {
+    emoji: "🗡️",
+    color: "#4c1d95",
+    gradient: "linear-gradient(135deg, #6d28d9, #312e81)",
+    hashtags: ["#나혼렙덕후테스트", "#덕후테스트", "#나혼자만레벨업", "#SoloLeveling", "#성진우"],
+    links: [
+      { label: "나혼렙 나무위키", url: "https://namu.wiki/w/%EB%82%98%20%ED%98%BC%EC%9E%90%EB%A7%8C%20%EB%A0%88%EB%B2%A8%EC%97%85", desc: "나 혼자만 레벨업 웹소설/웹툰 나무위키" },
+      { label: "나혼렙 애니 카카오페이지", url: "https://page.kakao.com/", desc: "나 혼자만 레벨업 카카오페이지 공식" },
+      { label: "넷마블 나혼렙: 어라이즈", url: "https://sololeveling.netmarble.com", desc: "나 혼자만 레벨업: 어라이즈 게임 공식 사이트" },
+    ],
+    otherThemes: [
+      { id: "diablo2", name: "디아블로 2 덕후 테스트", emoji: "🔥", desc: "성역의 수호자를 검증합니다! D2 + 악마술사 DLC", color: "#9f1414" },
+      { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
     ],
   },
 };
