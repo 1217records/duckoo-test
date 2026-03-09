@@ -60,12 +60,11 @@ function getRank(score: number, themeId: string): string {
   }
 
   if (themeId === "diablo2") {
-    if (score <= 20) return "노멀 모험가";
-    if (score <= 40) return "나이트메어 생존자";
-    if (score <= 60) return "헬 정복자";
-    if (score <= 75) return "룬워드 장인";
-    if (score <= 89) return "우버 헌터";
-    if (score <= 99) return "네팔렘";
+    if (score <= 24) return "노멀 모험가";
+    if (score <= 49) return "나이트메어 생존자";
+    if (score <= 69) return "헬 정복자";
+    if (score <= 84) return "우버 헌터";
+    if (score <= 94) return "네팔렘";
     return "성역의 수호자";
   }
 
