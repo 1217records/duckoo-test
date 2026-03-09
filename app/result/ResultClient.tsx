@@ -50,8 +50,10 @@ function getRank(score: number, themeId: string): string {
   }
 
   // Default (One Piece)
-  if (score <= 30) return "위대한 항로 루키";
-  if (score <= 65) return "신세계 최악의 세대";
+  if (score <= 24) return "이스트 블루 루키";
+  if (score <= 49) return "위대한 항로 모험가";
+  if (score <= 69) return "최악의 세대";
+  if (score <= 84) return "사황 간부";
   if (score <= 94) return "사황";
   return "해적왕";
 }
