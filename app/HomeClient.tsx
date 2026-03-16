@@ -9,6 +9,8 @@ const STORAGE = {
   name: "duckoo-player-name"
 };
 
+const DEFAULT_PLAYER_NAME = "익명 덕후";
+
 const faqData = [
   {
     q: "테스트는 무료인가요?",
@@ -28,7 +30,7 @@ const faqData = [
   },
   {
     q: "앞으로 어떤 테스트가 추가되나요?",
-    a: "현재 나루토, 해리포터, 마블 시네마틱 유니버스(MCU) 테스트를 준비 중입니다. 사용자 제안과 투표를 반영하여 지속적으로 테마를 확장해 나갑니다."
+    a: "현재 나루토, 해리포터, 블리치 테스트를 준비 중입니다. 사용자 제안과 투표를 반영하여 지속적으로 테마를 확장해 나갑니다."
   }
 ];
 
@@ -40,11 +42,7 @@ export default function HomeClient() {
 
   const startTest = (themeId: string) => {
     const trimmed = name.trim();
-    if (!trimmed) {
-      window.alert("닉네임을 입력해주세요.");
-      return;
-    }
-    localStorage.setItem(STORAGE.name, trimmed);
+    localStorage.setItem(STORAGE.name, trimmed || DEFAULT_PLAYER_NAME);
     router.push(`/test/${themeId}`);
   };
 
@@ -338,6 +336,191 @@ export default function HomeClient() {
               </>
             )}
           </article>
+
+          {/* MCU Test Card */}
+          <article
+            className={`themeCard highlighted-card accordion-card mcu-card ${activeTheme === 'mcu' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'mcu' ? null : 'mcu')}
+            style={{ "--primary-color": "#d32f2f" } as React.CSSProperties}
+          >
+            {activeTheme !== 'mcu' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                MCU 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header mcu-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #ef4444, #b91c1c)' }}><Clapperboard size={12} className="icon-left" />NEW</span>
+                  <h2 className="accordion-title">마블 시네마틱 유니버스 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    아이언맨부터 어벤져스, 인피니티 사가, 멀티버스까지. 히어로, 빌런, 스톤, 명장면을 모두 꿰고 있는지 검증합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-mcu"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 어셈블마스터)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton mcu-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("mcu"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
+
+          <article
+            className={`themeCard highlighted-card accordion-card aot-card ${activeTheme === 'aot' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'aot' ? null : 'aot')}
+            style={{ "--primary-color": "#6b7280" } as React.CSSProperties}
+          >
+            {activeTheme !== 'aot' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                진격의 거인 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header aot-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #4b5563, #111827)' }}><Shield size={12} className="icon-left" />NEW</span>
+                  <h2 className="accordion-title">진격의 거인 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    시가시나부터 마레, 길과 땅울림까지. 복선, 세계관, 계승 구조를 얼마나 정확히 이해하고 있는지 검증합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-aot"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 조사병단)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton aot-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("aot"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
+
+          <article
+            className={`themeCard highlighted-card accordion-card slamdunk-card ${activeTheme === 'slamdunk' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'slamdunk' ? null : 'slamdunk')}
+            style={{ "--primary-color": "#dc2626" } as React.CSSProperties}
+          >
+            {activeTheme !== 'slamdunk' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                슬램덩크 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header slamdunk-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #ef4444, #b91c1c)' }}><Award size={12} className="icon-left" />NEW</span>
+                  <h2 className="accordion-title">슬램덩크 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    북산 5인방, 능남과 해남, 전국대회 산왕전까지. 명경기와 성장 서사를 얼마나 정확히 기억하는지 검증합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-slamdunk"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 북산의 천재)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton slamdunk-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("slamdunk"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
+
+          <article
+            className={`themeCard highlighted-card accordion-card hxh-card ${activeTheme === 'hxh' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'hxh' ? null : 'hxh')}
+            style={{ "--primary-color": "#16a34a" } as React.CSSProperties}
+          >
+            {activeTheme !== 'hxh' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                헌터x헌터 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header hxh-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #22c55e, #15803d)' }}><Gamepad2 size={12} className="icon-left" />NEW</span>
+                  <h2 className="accordion-title">헌터x헌터 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    헌터 시험, 요크신, 그리드 아일랜드, 키메라 앤트, 넨 계통까지. 설정과 심리전을 얼마나 깊게 이해하는지 검증합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-hxh"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 입력 (예: 프로헌터)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton hxh-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("hxh"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
         </section>
 
         {/* How It Works Section */}
@@ -452,8 +635,8 @@ export default function HomeClient() {
             <article className="upcoming-card">
               <div className="upcoming-icon" style={{ background: 'linear-gradient(135deg, #e53935, #b71c1c)', color: 'white', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Clapperboard size={28} /></div>
               <div className="upcoming-content">
-                <h3>마블 시네마틱 유니버스 테스트</h3>
-                <p>어벤져스 어셈블! MCU의 디테일한 세계관, 히어로들의 숨겨진 이야기, 빌런의 동기까지 완벽하게 파악하고 계신가요?</p>
+                <h3>블리치 덕후 테스트</h3>
+                <p>사신, 참백도, 호로, 만해, 천년혈전까지. 전투 시스템과 설정 위계가 뚜렷해 다음 장기 운영 테마로 적합한 후보입니다.</p>
               </div>
             </article>
           </div>

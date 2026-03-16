@@ -49,7 +49,7 @@ export default function AboutPage() {
 
         <section className="intro-hero">
           <h2>&ldquo;당신의 덕력은 어느 정도인가요?&rdquo;</h2>
-          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2, 나 혼자만 레벨업 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
+          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2, 나 혼자만 레벨업, 마블 시네마틱 유니버스(MCU), 진격의 거인, 슬램덩크, 헌터x헌터 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
         </section>
 
         {/* 서비스 철학 섹션 */}
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <section className="content-section card-base-styles">
           <h2>📚 현재 제공 중인 테스트 테마</h2>
           <p style={{ marginBottom: '24px', lineHeight: 1.8, color: 'var(--secondary-text-color)' }}>
-            현재 여섯 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
+            현재 열 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
           </p>
           <div className="theme-overview-list">
             <div className="theme-overview-item">
@@ -151,6 +151,26 @@ export default function AboutPage() {
               <div className="theme-overview-badge sololeveling-badge" style={{ background: 'linear-gradient(135deg, #6d28d9, #312e81)', color: 'white' }}>NEW/애니</div>
               <h3>🗡️ 나 혼자만 레벨업 (Solo Leveling)</h3>
               <p>전 세계를 휩쓴 K-웹툰/애니메이션의 전설! 성진우와 그림자 군단의 서사, 헌터 랭킹 및 세계관의 심층 지식을 검증합니다. 등급: E급 헌터 → C급 헌터 → A급 헌터 → S급 헌터 → 국가 권력급 → 그림자 군주</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge" style={{ background: 'linear-gradient(135deg, #ef4444, #991b1b)', color: 'white' }}>NEW/영화</div>
+              <h3>🦸 마블 시네마틱 유니버스 (MCU)</h3>
+              <p>아이언맨부터 어벤져스, 인피니티 사가, 멀티버스까지. 히어로와 빌런, 인피니티 스톤, 명대사와 설정 디테일을 모두 아우르는 영화/드라마 통합 덕력 검증 테마입니다. 등급: 쉴드 신입 요원 → 정식 어벤져스 → 인피니티 사가 전문가 → 어셈블 마스터</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge" style={{ background: 'linear-gradient(135deg, #6b7280, #111827)', color: 'white' }}>NEW/애니</div>
+              <h3>🪽 진격의 거인 (Attack on Titan)</h3>
+              <p>시가시나, 지하실, 마레, 길, 땅울림까지 이어지는 복선 회수형 서사를 기반으로 한 고밀도 퀴즈 테마입니다. 등급: 훈련병단 신병 → 조사병단 정예 → 엘디아 비밀 해독자 → 벽 너머의 진실 도달자</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge" style={{ background: 'linear-gradient(135deg, #ef4444, #991b1b)', color: 'white' }}>NEW/스포츠</div>
+              <h3>🏀 슬램덩크 (Slam Dunk)</h3>
+              <p>북산 5인방의 성장, 능남과 해남, 그리고 전국대회 산왕전까지. 농구 경기의 열기와 캐릭터 서사를 함께 기억하는 팬을 위한 테마입니다. 등급: 농구부 신입 → 주전급 플레이어 → 전국대회 핵심 전력 → 북산의 전설</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge" style={{ background: 'linear-gradient(135deg, #22c55e, #166534)', color: 'white' }}>NEW/애니</div>
+              <h3>🃏 헌터x헌터 (Hunter x Hunter)</h3>
+              <p>헌터 시험, 요크신 시티, 그리드 아일랜드, 키메라 앤트, 넨 계통까지 단계적으로 파고드는 전략형 퀴즈 테마입니다. 등급: 헌터 시험 응시생 → 넨 수련자 → 헌터 협회 핵심 → 더블 스타급 헌터</p>
             </div>
           </div>
         </section>
@@ -188,7 +208,7 @@ export default function AboutPage() {
 
           <div className="highlight-box">
             <p className="highlight-title">🌟 함께 만들어가는 플랫폼</p>
-            <p className="highlight-desc">팬 투표를 기반으로 꾸준히 새로운 작품(애니, 드라마, 게임) 테마가 추가됩니다. 현재 나루토, 해리포터, 마블 시네마틱 유니버스(MCU) 테스트를 준비 중입니다. 여러분의 제안이 덕후테스트의 기출 문제가 됩니다.</p>
+            <p className="highlight-desc">팬 투표를 기반으로 꾸준히 새로운 작품(애니, 드라마, 게임) 테마가 추가됩니다. 현재 나루토, 해리포터, 블리치 테스트를 준비 중입니다. 여러분의 제안이 덕후테스트의 기출 문제가 됩니다.</p>
           </div>
         </section>
 

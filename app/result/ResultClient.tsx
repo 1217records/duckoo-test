@@ -8,6 +8,7 @@ import html2canvas from 'html2canvas';
 import { useToast } from '../Toast';
 
 const SITE_URL = "https://duckootest.pages.dev";
+const DEFAULT_PLAYER_NAME = "익명 덕후";
 
 interface ReviewItem {
   question: string;
@@ -75,6 +76,46 @@ function getRank(score: number, themeId: string): string {
     if (score <= 84) return "우버 헌터";
     if (score <= 94) return "네팔렘";
     return "성역의 수호자";
+  }
+
+  if (themeId === "mcu") {
+    if (score <= 20) return "쉴드 신입 요원";
+    if (score <= 40) return "어벤져스 지원 요원";
+    if (score <= 60) return "뉴욕 전투 생존자";
+    if (score <= 75) return "정식 어벤져스";
+    if (score <= 89) return "인피니티 사가 전문가";
+    if (score <= 99) return "멀티버스 감시자";
+    return "어셈블 마스터";
+  }
+
+  if (themeId === "aot") {
+    if (score <= 20) return "훈련병단 신병";
+    if (score <= 40) return "주둔병단 실전병";
+    if (score <= 60) return "조사병단 정예";
+    if (score <= 75) return "월 마리아 탈환대";
+    if (score <= 89) return "엘디아 비밀 해독자";
+    if (score <= 99) return "자유의 날개 계승자";
+    return "벽 너머의 진실 도달자";
+  }
+
+  if (themeId === "slamdunk") {
+    if (score <= 20) return "농구부 신입";
+    if (score <= 40) return "북산 벤치 멤버";
+    if (score <= 60) return "주전급 플레이어";
+    if (score <= 75) return "현 대회 에이스";
+    if (score <= 89) return "전국대회 핵심 전력";
+    if (score <= 99) return "산왕전 승부사";
+    return "북산의 전설";
+  }
+
+  if (themeId === "hxh") {
+    if (score <= 20) return "헌터 시험 응시생";
+    if (score <= 40) return "초보 헌터";
+    if (score <= 60) return "넨 수련자";
+    if (score <= 75) return "프로 헌터";
+    if (score <= 89) return "환영여단 추적자";
+    if (score <= 99) return "헌터 협회 핵심";
+    return "더블 스타급 헌터";
   }
 
   // Default (One Piece)
@@ -185,11 +226,72 @@ const THEME_META: Record<string, {
       { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
     ],
   },
+  mcu: {
+    emoji: "🦸",
+    color: "#d32f2f",
+    gradient: "linear-gradient(135deg, #ef4444, #991b1b)",
+    hashtags: ["#MCU덕후테스트", "#덕후테스트", "#마블", "#어벤져스", "#MarvelStudios"],
+    links: [
+      { label: "마블 스튜디오 공식", url: "https://www.marvel.com/movies", desc: "MCU 영화 및 드라마 공식 소개 페이지" },
+      { label: "마블 코리아", url: "https://www.marvelkorea.com", desc: "마블 코리아 공식 사이트" },
+      { label: "마블 위키", url: "https://marvelcinematicuniverse.fandom.com", desc: "MCU 설정과 작품 정보를 정리한 팬 위키" },
+    ],
+    otherThemes: [
+      { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "방대한 세계관과 설정 디테일을 함께 검증해보세요.", color: "#4f46e5" },
+      { id: "sololeveling", name: "나 혼자만 레벨업 덕후 테스트", emoji: "🗡️", desc: "서사와 전투, 각성 설정까지 깊게 파고듭니다.", color: "#4c1d95" },
+    ],
+  },
+  aot: {
+    emoji: "🪽",
+    color: "#6b7280",
+    gradient: "linear-gradient(135deg, #6b7280, #111827)",
+    hashtags: ["#진격의거인덕후테스트", "#덕후테스트", "#진격의거인", "#AttackOnTitan", "#조사병단"],
+    links: [
+      { label: "진격의 거인 나무위키", url: "https://namu.wiki/w/%EC%A7%84%EA%B2%A9%EC%9D%98%20%EA%B1%B0%EC%9D%B8", desc: "작품 세계관과 등장인물 정리" },
+      { label: "애니 공식 사이트", url: "https://shingeki.net", desc: "진격의 거인 애니메이션 공식 사이트" },
+      { label: "공식 X", url: "https://x.com/anime_shingeki", desc: "진격의 거인 애니 공식 계정" },
+    ],
+    otherThemes: [
+      { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "장기 서사와 복선을 좋아하면 이쪽도 잘 맞습니다.", color: "#4f46e5" },
+      { id: "mcu", name: "MCU 덕후 테스트", emoji: "🦸", desc: "인물과 세계관을 넓게 연결해 기억하는 재미가 비슷합니다.", color: "#d32f2f" },
+    ],
+  },
+  slamdunk: {
+    emoji: "🏀",
+    color: "#dc2626",
+    gradient: "linear-gradient(135deg, #ef4444, #991b1b)",
+    hashtags: ["#슬램덩크덕후테스트", "#덕후테스트", "#슬램덩크", "#SlamDunk", "#북산"],
+    links: [
+      { label: "슬램덩크 나무위키", url: "https://namu.wiki/w/SLAM%20DUNK", desc: "작품과 경기, 등장인물 정리" },
+      { label: "더 퍼스트 슬램덩크 공식", url: "https://slamdunk-movie.jp", desc: "극장판 공식 사이트" },
+      { label: "토에이 애니메이션", url: "https://www.toei-anim.co.jp", desc: "관련 애니메이션 제작사 사이트" },
+    ],
+    otherThemes: [
+      { id: "aot", name: "진격의 거인 덕후 테스트", emoji: "🪽", desc: "몰입감 있는 장기 서사와 명장면 기억력을 같이 시험해보세요.", color: "#6b7280" },
+      { id: "pokemon", name: "포켓몬스터 덕후 테스트", emoji: "🎮", desc: "세대 추억형 테마를 좋아한다면 이쪽도 잘 맞습니다.", color: "#16a34a" },
+    ],
+  },
+  hxh: {
+    emoji: "🃏",
+    color: "#16a34a",
+    gradient: "linear-gradient(135deg, #22c55e, #166534)",
+    hashtags: ["#헌터헌터덕후테스트", "#덕후테스트", "#헌터x헌터", "#HunterxHunter", "#넨"],
+    links: [
+      { label: "헌터x헌터 나무위키", url: "https://namu.wiki/w/HUNTER%C3%97HUNTER", desc: "작품 세계관과 인물, 능력 정리" },
+      { label: "점프 공식", url: "https://www.shonenjump.com", desc: "소년 점프 공식 사이트" },
+      { label: "애니메이션 공식", url: "https://www.ntv.co.jp/hunterhunter/", desc: "애니메이션 공식 사이트" },
+    ],
+    otherThemes: [
+      { id: "aot", name: "진격의 거인 덕후 테스트", emoji: "🪽", desc: "복선과 세계관 밀도가 높은 작품을 좋아하면 잘 맞습니다.", color: "#6b7280" },
+      { id: "slamdunk", name: "슬램덩크 덕후 테스트", emoji: "🏀", desc: "장기 성장 서사와 명장면 기억력을 이어서 즐길 수 있습니다.", color: "#dc2626" },
+    ],
+  },
 };
 
 export default function ResultClient() {
   const [result, setResult] = useState<SavedResult | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
   const searchParams = useSearchParams();
   const themeId = searchParams.get("theme") ?? "onepiece";
   const certificateRef = useRef<HTMLDivElement>(null);
@@ -205,7 +307,12 @@ export default function ResultClient() {
     try {
       const parsed = JSON.parse(raw) as SavedResult;
       if (parsed.themeId === themeId) {
-        setResult(parsed);
+        const normalizedPlayer = parsed.player?.trim() || DEFAULT_PLAYER_NAME;
+        setResult({
+          ...parsed,
+          player: normalizedPlayer,
+        });
+        setNameDraft(normalizedPlayer);
       }
     } catch {
       setResult(null);
@@ -223,6 +330,24 @@ export default function ResultClient() {
   const shareText = result ? `[${result.themeName}] ${result.player} 님은 ${result.score}점 (${getRank(result.score, result.themeId)}) 달성!` : "";
   const shareTitle = "덕후테스트 결과";
   const shareDescription = result ? `${result.totalCount}문제 중 ${result.correct}개 정답! 나도 도전하기 →` : "";
+
+  const updatePlayerName = (nextDraft: string) => {
+    setNameDraft(nextDraft);
+    setResult((prev) => {
+      if (!prev) return prev;
+
+      const normalizedPlayer = nextDraft.trim() || DEFAULT_PLAYER_NAME;
+      const nextResult = {
+        ...prev,
+        player: normalizedPlayer,
+      };
+
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextResult));
+      localStorage.setItem("duckoo-player-name", normalizedPlayer);
+
+      return nextResult;
+    });
+  };
 
   const generateCertificateImage = async (isShare = false): Promise<{ dataUrl: string, blob: Blob } | null> => {
     if (!certificateRef.current) return null;
@@ -511,6 +636,22 @@ export default function ResultClient() {
               인증서 저장하기
             </button>
           </div>
+
+          <section className="name-edit-section glass">
+            <div className="name-edit-copy">
+              <h2 className="name-edit-title">수료증 닉네임 수정</h2>
+              <p className="name-edit-desc">여기서 수정하면 인증서, 공유 문구, 이미지 저장 파일명에 바로 반영됩니다.</p>
+            </div>
+            <div className="input-group" style={{ marginBottom: 0 }}>
+              <input
+                id="result-player-name"
+                className="nicknameInput"
+                placeholder={DEFAULT_PLAYER_NAME}
+                value={nameDraft}
+                onChange={(event) => updatePlayerName(event.target.value)}
+              />
+            </div>
+          </section>
 
           {/* SNS 공유 섹션 - 강화 버전 */}
           <div className="share-section-enhanced glass">

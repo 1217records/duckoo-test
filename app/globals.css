@@ -658,10 +658,116 @@ p {
   filter: brightness(1.1);
 }
 
+/* Base button appearance for MCU */
+.accordion-card:not(.expanded).mcu-card {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+  box-shadow: 0 4px 14px rgba(211, 47, 47, 0.32);
+}
+
+.accordion-card:not(.expanded).mcu-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(211, 47, 47, 0.42);
+  filter: brightness(1.08);
+}
+
+/* Base button appearance for Attack on Titan */
+.accordion-card:not(.expanded).aot-card {
+  background: linear-gradient(135deg, #4b5563, #111827);
+  box-shadow: 0 4px 14px rgba(31, 41, 55, 0.32);
+}
+
+.accordion-card:not(.expanded).aot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 41, 55, 0.42);
+  filter: brightness(1.08);
+}
+
+.accordion-card:not(.expanded).slamdunk-card {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.32);
+}
+
+.accordion-card:not(.expanded).slamdunk-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.42);
+  filter: brightness(1.08);
+}
+
+.accordion-card:not(.expanded).hxh-card {
+  background: linear-gradient(135deg, #22c55e, #166534);
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.32);
+}
+
+.accordion-card:not(.expanded).hxh-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.42);
+  filter: brightness(1.08);
+}
+
 /* Expanded State Styles */
 .accordion-card.expanded {
-  background: var(--surface-color);
-  /* Return to glassmorphism */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.accordion-card.expanded.onepiece-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #7c3aed, #1d4ed8);
+}
+
+.accordion-card.expanded.lol-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #c8aa6e, #6b4f1d);
+}
+
+.accordion-card.expanded.fma-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #b91c1c, #7f1d1d);
+}
+
+.accordion-card.expanded.pokemon-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.accordion-card.expanded.diablo2-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #dc2626, #7f1d1d);
+}
+
+.accordion-card.expanded.sololeveling-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #6d28d9, #312e81);
+}
+
+.accordion-card.expanded.mcu-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #ef4444, #991b1b);
+}
+
+.accordion-card.expanded.aot-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #4b5563, #111827);
+}
+
+.accordion-card.expanded.slamdunk-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #ef4444, #991b1b);
+}
+
+.accordion-card.expanded.hxh-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #22c55e, #166534);
 }
 
 .accordion-card.expanded .card-header {
@@ -672,6 +778,31 @@ p {
 
 .accordion-card.expanded .accordion-title {
   font-size: 24px;
+  color: #fff;
+}
+
+.accordion-card.expanded .accordion-description {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.accordion-card.expanded .accordion-info-box {
+  background: rgba(255, 255, 255, 0.12);
+  border-left-color: rgba(255, 255, 255, 0.75);
+}
+
+.accordion-card.expanded .accordion-info-box .info-text {
+  color: #fff;
+}
+
+.accordion-card.expanded .nicknameInput {
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+}
+
+.accordion-card.expanded .nicknameInput:focus {
+  background: #fff;
+  border-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18);
 }
 
 .card-expanded-content {
@@ -829,6 +960,25 @@ p {
   flex-direction: column;
   align-items: center;
   margin-bottom: 48px;
+}
+
+.name-edit-section {
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.name-edit-title {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.name-edit-desc {
+  font-size: 15px;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .premium-cert {

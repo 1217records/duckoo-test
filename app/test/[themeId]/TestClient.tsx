@@ -11,6 +11,8 @@ const STORAGE = {
   result: "duckoo-last-result"
 };
 
+const DEFAULT_PLAYER_NAME = "익명 덕후";
+
 export default function TestClient({ theme }: { theme: Theme }) {
   const router = useRouter();
   const [player, setPlayer] = useState<string | null>(null);
@@ -21,12 +23,9 @@ export default function TestClient({ theme }: { theme: Theme }) {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE.name);
-    if (!stored) {
-      window.alert("닉네임 정보가 없습니다. 홈에서 다시 시작해주세요.");
-      router.replace("/");
-      return;
-    }
-    setPlayer(stored);
+    const playerName = stored?.trim() || DEFAULT_PLAYER_NAME;
+    localStorage.setItem(STORAGE.name, playerName);
+    setPlayer(playerName);
   }, [router]);
 
   if (!player) {
@@ -109,4 +108,3 @@ export default function TestClient({ theme }: { theme: Theme }) {
     </div>
   );
 }
-

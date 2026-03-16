@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import TestClient from "./TestClient";
-import { getTheme } from "@/lib/tests/registry";
+import { getTheme, getThemes } from "@/lib/tests/registry";
 
 type Props = { params: Promise<{ themeId: string }> };
+
+export function generateStaticParams() {
+  return getThemes().map((theme) => ({
+    themeId: theme.id,
+  }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { themeId } = await params;

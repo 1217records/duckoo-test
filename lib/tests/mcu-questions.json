@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "question": "아이언맨의 정체는 누구인가?",
+    "options": ["스티브 로저스", "토니 스타크", "브루스 배너", "스티븐 스트레인지"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 2,
+    "question": "캡틴 아메리카의 방패를 이루는 대표 금속은?",
+    "options": ["아다만티움", "베스카", "비브라늄", "우루"],
+    "answerIndex": 2,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 3,
+    "question": "토르가 태어나고 자란 왕국은 어디인가?",
+    "options": ["미드가르드", "아스가르드", "니다벨리르", "요툰헤임"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 4,
+    "question": "헐크의 인간 모습 이름은?",
+    "options": ["브루스 배너", "브루스 웨인", "행크 핌", "샘 윌슨"],
+    "answerIndex": 0,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 5,
+    "question": "블랙 위도우의 본명은?",
+    "options": ["옐레나 벨로바", "완다 막시모프", "나타샤 로마노프", "샤론 카터"],
+    "answerIndex": 2,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 6,
+    "question": "호크아이가 주로 사용하는 무기는?",
+    "options": ["창", "활과 화살", "해머", "쌍권총"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 7,
+    "question": "MCU의 초대 스파이더맨은 누구인가?",
+    "options": ["피터 퀼", "피터 파커", "에디 브록", "맷 머독"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 8,
+    "question": "블랙 팬서로 활약하는 와칸다의 왕은 누구인가?",
+    "options": ["음바쿠", "에릭 킬몽거", "티찰라", "오코예"],
+    "answerIndex": 2,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 9,
+    "question": "닥터 스트레인지는 마법사가 되기 전 어떤 직업이었나?",
+    "options": ["변호사", "외과 의사", "물리학자", "기자"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 10,
+    "question": "앤트맨의 대표 능력은 무엇인가?",
+    "options": ["투명화", "비행", "몸을 작게 만드는 것", "텔레파시"],
+    "answerIndex": 2,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 11,
+    "question": "가디언즈 오브 갤럭시의 그루트가 자주 하는 말은?",
+    "options": ["위 아 베놈", "아이 엠 그루트", "어벤져스 어셈블", "와칸다 포에버"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 12,
+    "question": "로키는 누구의 의형제인가?",
+    "options": ["토르", "발키리", "헤임달", "오딘"],
+    "answerIndex": 0,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 13,
+    "question": "비전의 이마에 박혀 있던 인피니티 스톤은 무엇인가?",
+    "options": ["타임 스톤", "마인드 스톤", "리얼리티 스톤", "파워 스톤"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 14,
+    "question": "닉 퓨리가 이끌던 조직은?",
+    "options": ["하이드라", "S.W.O.R.D.", "쉴드", "일루미나티"],
+    "answerIndex": 2,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 15,
+    "question": "버키 반즈의 대표 별명은?",
+    "options": ["레드 가디언", "윈터 솔져", "팔콘", "화이트 울프"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 16,
+    "question": "캡틴 마블의 본명은?",
+    "options": ["캐럴 댄버스", "마리아 램보", "모니카 램보", "페기 카터"],
+    "answerIndex": 0,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 17,
+    "question": "타노스가 모으려 했던 것은?",
+    "options": ["드래곤볼", "인피니티 스톤", "테서랙트 조각", "비브라늄 무기"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 18,
+    "question": "슈리는 누구의 여동생인가?",
+    "options": ["에릭 킬몽거", "티찰라", "음바쿠", "로키"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 19,
+    "question": "스타로드의 본명은?",
+    "options": ["피터 파커", "피터 퀼", "리처드 라이더", "샘 알렉산더"],
+    "answerIndex": 1,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 20,
+    "question": "완다 막시모프의 쌍둥이 남동생 이름은?",
+    "options": ["피에트로", "비전", "드루이그", "빌리"],
+    "answerIndex": 0,
+    "difficulty": "하",
+    "points": 4
+  },
+  {
+    "id": 21,
+    "question": "토니 스타크의 가슴 아크 리액터는 초기에 무엇을 막기 위해 필요했나?",
+    "options": ["감마선 폭주", "파편이 심장에 박히는 것", "테서랙트 누출", "비브라늄 중독"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 22,
+    "question": "'캡틴 아메리카: 시빌 워'에서 갈등의 계기가 된 협정 이름은?",
+    "options": ["라고스 협정", "어벤져스 헌장", "소코비아 협정", "뉴욕 조약"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 23,
+    "question": "토르의 묠니르는 누가 만든 금속으로 제작되었는가?",
+    "options": ["비브라늄", "우루", "티타늄", "아다만티움"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 24,
+    "question": "'스파이더맨: 홈커밍'의 메인 빌런 벌처의 본명은?",
+    "options": ["퀜틴 벡", "맥 가간", "아드리안 툼스", "노먼 오스본"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 25,
+    "question": "닥터 스트레인지가 자주 사용하는 시간 관련 유물은?",
+    "options": ["다크홀드", "비샨티의 서", "아가모토의 눈", "운다글래스"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 26,
+    "question": "가디언즈 오브 갤럭시 1편에서 팀이 함께 수감되었던 감옥 이름은?",
+    "options": ["노웨어", "킬른", "잔다르", "웨어월드"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 27,
+    "question": "'블랙 팬서'에서 왕위 도전 의식이 열리는 장소는?",
+    "options": ["하트 허브 동굴", "와칸다 돔", "워리어 폴스", "자발리 산맥"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 28,
+    "question": "'어벤져스: 엔드게임'은 스냅 이후 몇 년 뒤를 배경으로 하나?",
+    "options": ["2년", "3년", "5년", "10년"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 29,
+    "question": "'완다비전'에서 완다가 현실을 뒤덮은 마을 이름은?",
+    "options": ["웨스트뷰", "이스트뷰", "뉴아스가르드", "소코비아"],
+    "answerIndex": 0,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 30,
+    "question": "'로키' 시리즈의 TVA는 무엇의 약자인가?",
+    "options": ["Time Variant Agency", "Temporal Vision Authority", "Time Variance Authority", "Timeline Vigilance Alliance"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 31,
+    "question": "'샹치와 텐 링즈의 전설'에서 샹치가 물려받는 유물은?",
+    "options": ["비샨티의 서", "텐 링즈", "에테르", "네크로소드"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 32,
+    "question": "'스파이더맨: 노 웨이 홈'에서 피터의 부탁으로 주문을 시전하던 인물은 누구인가?",
+    "options": ["웡", "닥터 스트레인지", "미스테리오", "네드"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 33,
+    "question": "'팔콘과 윈터 솔져' 이후 정식으로 캡틴 아메리카 방패를 계승한 인물은?",
+    "options": ["버키 반즈", "호아킨 토레스", "샘 윌슨", "존 워커"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 34,
+    "question": "'호크아이'에서 케이트 비숍과 함께 다니는 반려견의 이름은?",
+    "options": ["럭키", "러키", "코스모", "피자"],
+    "answerIndex": 0,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 35,
+    "question": "'블랙 위도우'에서 나타샤의 동생으로 등장하는 인물은?",
+    "options": ["옐레나 벨로바", "멜리나 보스토코프", "알렉세이 쇼스타코프", "아바 스타"],
+    "answerIndex": 0,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 36,
+    "question": "앤트맨 시리즈에서 크기 조절 기술과 밀접한 차원은 무엇인가?",
+    "options": ["미러 디멘션", "퀀텀 렐름", "다크 디멘션", "아스트랄 플레인"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 37,
+    "question": "'닥터 스트레인지: 대혼돈의 멀티버스'에서 반복적으로 등장하는 금서 이름은?",
+    "options": ["다크홀드", "코란 글레이브", "위산티 코드", "오딘슬립"],
+    "answerIndex": 0,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 38,
+    "question": "'스파이더맨: 파 프롬 홈'에서 쿠엔틴 벡이 사용하는 빌런 이름은?",
+    "options": ["벌처", "모비우스", "미스테리오", "쇼커"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 39,
+    "question": "'캡틴 마블'에서 캐럴 댄버스가 힘의 근원이 된 에너지와 연결되는 스톤은?",
+    "options": ["타임 스톤", "파워 스톤", "스페이스 스톤", "소울 스톤"],
+    "answerIndex": 2,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 40,
+    "question": "'이터널스'에서 지구 내부에서 깨어나려 했던 셀레스티얼의 이름은?",
+    "options": ["아리솀", "티아무트", "에고", "크론스"],
+    "answerIndex": 1,
+    "difficulty": "중",
+    "points": 5
+  },
+  {
+    "id": 41,
+    "question": "'아이언맨 2'에서 토니가 잠입한 나타샤 로마노프에게 처음 들은 이름은?",
+    "options": ["나탈리 러시먼", "마리아 힐", "멜리나", "샤론 카터"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 42,
+    "question": "하워드 스타크의 연구를 바탕으로 토니가 새로 합성한 원소는 무엇을 대체하기 위한 것이었나?",
+    "options": ["비브라늄", "팔라듐", "우루", "이리듐"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 43,
+    "question": "'캡틴 아메리카: 퍼스트 어벤져'에서 스티브에게 슈퍼 솔저 혈청을 투여한 과학자는?",
+    "options": ["아브라함 어스킨", "아르님 졸라", "행크 핌", "에릭 셀빅"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 44,
+    "question": "'토르: 다크 월드'에서 리얼리티 스톤의 액체 형태 명칭은?",
+    "options": ["에테르", "오벨리스크", "템퍼드 코어", "네크로미스트"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 45,
+    "question": "'가디언즈 오브 갤럭시 VOL. 2'에서 피터 퀼의 친부는 누구인가?",
+    "options": ["욘두", "타노스", "에고", "로난"],
+    "answerIndex": 2,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 46,
+    "question": "'앤트맨'에서 스콧 랭이 훈련시킨 날아다니는 개미의 이름은?",
+    "options": ["안토니", "행크", "카산드라", "피미"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 47,
+    "question": "'캡틴 아메리카: 시빌 워'에서 토니가 진실을 알고 격분하게 된 사건은 무엇인가?",
+    "options": ["울트론 제작", "소코비아 붕괴", "버키가 그의 부모를 죽인 것", "스티브의 정체 은폐"],
+    "answerIndex": 2,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 48,
+    "question": "'블랙 팬서'에서 자발리 부족의 지도자는 누구인가?",
+    "options": ["오코예", "와카비", "음바쿠", "주리"],
+    "answerIndex": 2,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 49,
+    "question": "'어벤져스: 인피니티 워'에서 가모라가 어린 시절 잃은 고향 행성의 이름은?",
+    "options": ["제호베레이", "잔다르", "보르미르", "사카르"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 50,
+    "question": "'어벤져스: 엔드게임'에서 헐크의 스냅 직후 가장 먼저 연락이 닿는 사람은 누구인가?",
+    "options": ["토니 스타크", "클린트 바튼의 아내 로라", "스콧 랭", "버키 반즈"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 51,
+    "question": "'완다비전'에서 아가사 하크니스가 반복해 부르는 정체 폭로용 노래의 핵심 구절은?",
+    "options": ["It Was Agatha All Along", "Wanda Did This", "Magic Made Me", "Hex Is Forever"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 52,
+    "question": "'로키' 시즌 1에서 타임키퍼 뒤의 실질적 설계자로 밝혀지는 존재는 누구인가?",
+    "options": ["캉", "그 남아 있는 자", "라보나 렌슬레이어", "미스 미닛츠"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 53,
+    "question": "'샹치와 텐 링즈의 전설'에서 샹치의 본명은?",
+    "options": ["쉬안", "수 리엔", "쉬샤링", "쉬 정"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 54,
+    "question": "'문 나이트'에서 마크 스펙터에게 힘을 부여한 이집트 신은?",
+    "options": ["아미트", "콘슈", "타웨레트", "아누비스"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 55,
+    "question": "'스파이더맨: 노 웨이 홈'의 마지막에서 피터가 직접 만들기 시작한 슈트의 대표 색 조합은?",
+    "options": ["검정-금", "빨강-파랑", "초록-보라", "은색-검정"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 56,
+    "question": "'블랙 팬서: 와칸다 포에버'에서 네이머가 통치하는 수중 왕국의 이름은?",
+    "options": ["애틀랜티스", "탈로칸", "렘니아", "라티베리아"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 57,
+    "question": "'가디언즈 오브 갤럭시 VOL. 3'에서 로켓을 실험 대상으로 다룬 과학자의 이름은?",
+    "options": ["하이 에볼루셔너리", "코러스 글레이브", "태서페이스", "아담 워록"],
+    "answerIndex": 0,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 58,
+    "question": "'더 마블스'에서 캐럴, 모니카, 카말라가 동시에 힘을 쓰면 발생하는 현상은?",
+    "options": ["시간 정지", "공간 붕괴", "서로 위치가 바뀜", "기억 공유"],
+    "answerIndex": 2,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 59,
+    "question": "'닥터 스트레인지' 1편에서 스트레인지가 도르마무와 맞설 때 반복시킨 것은 무엇인가?",
+    "options": ["차원 균열", "시간 루프", "영혼 분리", "멀티버스 충돌"],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  },
+  {
+    "id": 60,
+    "question": "'아이언맨' 1편 말미에서 토니 스타크가 기자회견에서 밝힌 한마디는?",
+    "options": ["I am inevitable.", "I am Iron Man.", "Avengers assemble.", "Proof that Tony Stark has a heart."],
+    "answerIndex": 1,
+    "difficulty": "상",
+    "points": 7
+  }
+]

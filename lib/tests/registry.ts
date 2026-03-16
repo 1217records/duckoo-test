@@ -4,6 +4,10 @@ import { fmaTheme } from "./fma";
 import { pokemonTheme } from "./pokemon";
 import { diablo2Theme } from "./diablo2";
 import { sololevelingTheme } from "./sololeveling";
+import { mcuTheme } from "./mcu";
+import { aotTheme } from "./aot";
+import { slamdunkTheme } from "./slamdunk";
+import { hxhTheme } from "./hxh";
 import type { Theme } from "./types";
 
 const themes: Record<string, Theme> = {
@@ -13,6 +17,10 @@ const themes: Record<string, Theme> = {
   [pokemonTheme.id]: pokemonTheme,
   [diablo2Theme.id]: diablo2Theme,
   [sololevelingTheme.id]: sololevelingTheme,
+  [mcuTheme.id]: mcuTheme,
+  [aotTheme.id]: aotTheme,
+  [slamdunkTheme.id]: slamdunkTheme,
+  [hxhTheme.id]: hxhTheme,
 };
 
 export function getTheme(themeId: string): Theme | null {
