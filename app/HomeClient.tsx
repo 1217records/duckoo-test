@@ -64,13 +64,13 @@ export default function HomeClient() {
             {activeTheme !== 'onepiece' ? (
               <>
                 <Play size={18} className="icon-left" />
-                원피스 테스트
+                원피스 덕후 테스트
               </>
             ) : (
               <>
                 <div className="card-header onepiece-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span className="chip" style={{ margin: 0, padding: '4px 8px' }}><Flame size={12} className="icon-left" />인기</span>
-                  <h2 className="accordion-title">원피스 테스트</h2>
+                  <h2 className="accordion-title">원피스 덕후 테스트</h2>
                 </div>
 
                 <div className="card-expanded-content">
@@ -111,13 +111,13 @@ export default function HomeClient() {
             {activeTheme !== 'lol' ? (
               <>
                 <Play size={18} className="icon-left" />
-                리그 오브 레전드 테스트
+                리그 오브 레전드 덕후 테스트
               </>
             ) : (
               <>
                 <div className="card-header lol-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span className="chip" style={{ margin: 0, padding: '4px 8px' }}><Gamepad2 size={12} className="icon-left" />NEW</span>
-                  <h2 className="accordion-title">리그 오브 레전드 테스트</h2>
+                  <h2 className="accordion-title">리그 오브 레전드 덕후 테스트</h2>
                 </div>
 
                 <div className="card-expanded-content">
@@ -158,13 +158,13 @@ export default function HomeClient() {
             {activeTheme !== 'fma' ? (
               <>
                 <Play size={18} className="icon-left" />
-                강철의 연금술사 테스트
+                강철의 연금술사 덕후 테스트
               </>
             ) : (
               <>
                 <div className="card-header fma-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #b91c1c, #991b1b)' }}><Shield size={12} className="icon-left" />NEW</span>
-                  <h2 className="accordion-title">강철의 연금술사 테스트</h2>
+                  <h2 className="accordion-title">강철의 연금술사 덕후 테스트</h2>
                 </div>
 
                 <div className="card-expanded-content">
