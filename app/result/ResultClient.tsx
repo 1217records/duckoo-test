@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState, useRef } from "react";
-import { Download, MessageCircle, Instagram, Twitter, Share2, ClipboardCheck, ExternalLink, BookOpen, Play, Hash } from 'lucide-react';
+import { Download, MessageCircle, Instagram, Twitter, Share2, ClipboardCheck, ExternalLink, BookOpen, Play, Hash, Anchor, Skull } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { useToast } from '../Toast';
 
@@ -543,6 +543,122 @@ export default function ResultClient() {
   const meta = THEME_META[themeId] ?? THEME_META["onepiece"];
   const rank = getRank(result.score, result.themeId);
 
+  let certBorderColor = "#4f46e5";
+  let certBg = "radial-gradient(circle at center, #ffffff 0%, #f8fafc 100%)";
+  let watermarkBg = "#4f46e5";
+  let watermarkOpacity = 0.08;
+  let accentColor = "#4f46e5";
+  let textColor = "#0f172a";
+  let subTextColor = "#64748b";
+  let nameBoxBg = "#eef2ff";
+  let nameBoxBorder = "#c7d2fe";
+  let hasImageBg = false;
+
+  let textShadow = "0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1)";
+  let smallTextShadow = "0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.8)";
+
+  if (result.themeId === "onepiece") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#78350f";
+    textColor = "#45220a";
+    subTextColor = "#78350f";
+    nameBoxBg = "rgba(254, 243, 199, 0.7)";
+    nameBoxBorder = "rgba(252, 211, 77, 0.8)";
+    textShadow = "0 0 12px rgba(255,255,255,0.9), 0 0 24px rgba(251, 191, 36, 0.6)";
+    smallTextShadow = "0 0 8px rgba(255,255,255,0.8), 0 0 16px rgba(251, 191, 36, 0.5)";
+  } else if (result.themeId === "lol") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#0284c7";
+    textColor = "#0f172a";
+    subTextColor = "#0369a1";
+    nameBoxBg = "rgba(224, 242, 254, 0.7)";
+    nameBoxBorder = "rgba(125, 211, 252, 0.8)";
+    textShadow = "0 0 12px rgba(255,255,255,0.9), 0 0 24px rgba(14, 165, 233, 0.6)";
+    smallTextShadow = "0 0 8px rgba(255,255,255,0.8), 0 0 16px rgba(14, 165, 233, 0.5)";
+  } else if (result.themeId === "fma") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#7f1d1d";
+    textColor = "#450a0a";
+    subTextColor = "#b91c1c";
+    nameBoxBg = "rgba(254, 226, 226, 0.7)";
+    nameBoxBorder = "rgba(248, 113, 113, 0.8)";
+    textShadow = "0 0 15px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1)";
+    smallTextShadow = "0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,0.8)";
+  } else if (result.themeId === "pokemon") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#15803d";
+    textColor = "#1e293b";
+    subTextColor = "#16a34a";
+    nameBoxBg = "rgba(220, 252, 231, 0.7)";
+    nameBoxBorder = "rgba(134, 239, 172, 0.8)";
+    textShadow = "0 0 12px rgba(255,255,255,0.9), 0 0 24px rgba(34, 197, 94, 0.6)";
+    smallTextShadow = "0 0 8px rgba(255,255,255,0.8), 0 0 16px rgba(34, 197, 94, 0.5)";
+  } else if (result.themeId === "diablo2") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#dc2626";
+    textColor = "#ffffff";
+    subTextColor = "#fca5a5";
+    nameBoxBg = "rgba(0, 0, 0, 0.7)";
+    nameBoxBorder = "rgba(185, 28, 28, 0.8)";
+    textShadow = "2px 2px 4px rgba(0,0,0,1), 0 0 12px rgba(220, 38, 38, 0.8), 0 0 24px rgba(153, 27, 27, 0.6)";
+    smallTextShadow = "1px 1px 2px rgba(0,0,0,1), 0 0 8px rgba(220, 38, 38, 0.7), 0 0 16px rgba(153, 27, 27, 0.5)";
+  } else if (result.themeId === "sololeveling") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#a855f7";
+    textColor = "#ffffff";
+    subTextColor = "#c084fc";
+    nameBoxBg = "rgba(46, 16, 101, 0.7)";
+    nameBoxBorder = "rgba(168, 85, 247, 0.8)";
+    textShadow = "0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(168, 85, 247, 0.8)";
+    smallTextShadow = "0 0 5px rgba(59, 130, 246, 0.6), 0 0 10px rgba(168, 85, 247, 0.6)";
+  } else if (result.themeId === "mcu") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#ef4444";
+    textColor = "#ffffff";
+    subTextColor = "#60a5fa";
+    nameBoxBg = "rgba(15, 23, 42, 0.7)";
+    nameBoxBorder = "rgba(59, 130, 246, 0.8)";
+    textShadow = "0 0 12px rgba(96, 165, 250, 0.9), 0 0 24px rgba(239, 68, 68, 0.6)";
+    smallTextShadow = "0 0 8px rgba(96, 165, 250, 0.8), 0 0 16px rgba(239, 68, 68, 0.5)";
+  }
+  
+  let certBgImageUrl = "";
+  if (result.themeId === "onepiece") certBgImageUrl = "/images/onepiece_cert_bg_v2.png?v=4";
+  else if (result.themeId === "lol") certBgImageUrl = "/images/lol_cert_bg.png?v=4";
+  else if (result.themeId === "fma") certBgImageUrl = "/images/fma_cert_bg.png?v=3";
+  else if (result.themeId === "pokemon") certBgImageUrl = "/images/pokemon_cert_bg.png?v=2";
+  else if (result.themeId === "diablo2") certBgImageUrl = "/images/diablo2_cert_bg.png?v=1";
+  else if (result.themeId === "sololeveling") certBgImageUrl = "/images/sololeveling_cert_bg.png?v=1";
+  else if (result.themeId === "mcu") certBgImageUrl = "/images/mcu_cert_bg.png?v=2";
+
   return (
     <div className="shell result-shell">
       <main className="panel glass result-panel">
@@ -555,6 +671,10 @@ export default function ResultClient() {
             <section
               className="certificate premium-cert"
               ref={certificateRef}
+              style={{
+                background: hasImageBg ? 'none' : 'white',
+                boxShadow: hasImageBg ? 'none' : '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              }}
             >
               <div
                 className="cert-inner"
@@ -566,66 +686,140 @@ export default function ResultClient() {
                   flexDirection: 'column',
                   justifyContent: 'center',
                   alignItems: 'center',
-                  padding: '24px'
+                  padding: '24px',
+                  background: certBg,
+                  border: hasImageBg ? 'none' : `4px double ${certBorderColor}`,
+                  borderRadius: hasImageBg ? '16px' : '8px',
+                  outline: 'none',
+                  boxShadow: hasImageBg ? '0 10px 30px rgba(0,0,0,0.5)' : 'none',
+                  overflow: 'hidden'
                 }}
               >
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    opacity: 0.08,
-                    zIndex: -1,
-                    pointerEvents: 'none'
-                  }}
-                >
-                  <div style={{
-                    backgroundColor: '#4f46e5',
-                    borderRadius: '50%',
-                    width: '350px',
-                    height: '350px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}>
-                    <ClipboardCheck size={180} color="white" strokeWidth={1.5} />
-                  </div>
-                </div>
+                {hasImageBg && (
+                  <img 
+                    src={certBgImageUrl} 
+                    alt="Certificate Background" 
+                    crossOrigin="anonymous"
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      zIndex: -2,
+                      userSelect: 'none',
+                      pointerEvents: 'none'
+                    }}
+                  />
+                )}
 
-                <div style={{ marginBottom: '24px', textAlign: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
-                    <div style={{ height: '2px', width: '24px', backgroundColor: '#4f46e5', opacity: 0.5, marginRight: '12px' }} />
-                    <p style={{ fontSize: '13px', fontWeight: 800, color: '#4f46e5', letterSpacing: '0.2em', margin: 0 }}>OFFICIAL CERTIFICATE</p>
-                    <div style={{ height: '2px', width: '24px', backgroundColor: '#4f46e5', opacity: 0.5, marginLeft: '12px' }} />
+                {!hasImageBg && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%)',
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      opacity: watermarkOpacity,
+                      zIndex: -1,
+                      pointerEvents: 'none'
+                    }}
+                  >
+                    <div style={{
+                      backgroundColor: watermarkBg,
+                      borderRadius: '50%',
+                      width: '350px',
+                      height: '350px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}>
+                      <ClipboardCheck size={180} color="white" strokeWidth={1.5} />
+                    </div>
                   </div>
-                  <h2 style={{ fontSize: '32px', fontWeight: 900, color: '#0f172a', letterSpacing: '0.15em', margin: 0, textShadow: '1px 1px 2px rgba(0,0,0,0.05)' }}>덕후 인증서</h2>
-                  <p style={{ fontSize: '16px', fontWeight: 700, color: '#64748b', marginTop: '10px', marginBottom: 0 }}>
+                )}
+
+                <div style={{ marginBottom: '24px', textAlign: 'center', marginTop: '16px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+                    <p style={{ 
+                      fontSize: '13px', 
+                      fontWeight: 800, 
+                      color: accentColor, 
+                      letterSpacing: '0.2em', 
+                      margin: 0,
+                      textShadow: smallTextShadow
+                    }}>OFFICIAL CERTIFICATE</p>
+                  </div>
+                  <h2 style={{ 
+                    fontSize: '32px', 
+                    fontWeight: 900, 
+                    color: textColor, 
+                    letterSpacing: '0.15em', 
+                    margin: 0, 
+                    textShadow: textShadow 
+                  }}>덕후 인증서</h2>
+                  <p style={{ 
+                    fontSize: '16px', 
+                    fontWeight: 700, 
+                    color: subTextColor, 
+                    marginTop: '10px', 
+                    marginBottom: 0,
+                    textShadow: smallTextShadow
+                  }}>
                     {meta.emoji} {result.themeName}
                   </p>
                 </div>
 
                 <div style={{
-                  backgroundColor: '#eef2ff',
+                  backgroundColor: nameBoxBg,
                   padding: '12px 32px',
                   borderRadius: '16px',
                   display: 'inline-block',
                   marginBottom: '24px',
-                  border: '2px solid #c7d2fe',
-                  boxShadow: '0 4px 12px rgba(79, 70, 229, 0.1)',
+                  border: `2px solid ${nameBoxBorder}`,
+                  boxShadow: `0 4px 12px ${hasImageBg ? 'rgba(183, 121, 47, 0.1)' : 'rgba(79, 70, 229, 0.1)'}`,
                   textAlign: 'center'
                 }}>
-                  <p style={{ fontSize: '28px', fontWeight: 900, color: '#4f46e5', margin: 0, letterSpacing: '0.05em' }}>{result.player}</p>
+                  <p style={{ fontSize: '28px', fontWeight: 900, color: accentColor, margin: 0, letterSpacing: '0.05em' }}>{result.player}</p>
                 </div>
 
                 <div style={{ textAlign: 'center', marginBottom: '16px' }}>
-                  <p className="certScore" style={{ fontSize: '64px', margin: 0 }}>{result.score}<span style={{ fontSize: '24px' }}>점</span></p>
-                  <p className="certRank" style={{ fontSize: '24px', marginTop: '8px', margin: 0 }}>{rank}</p>
+                  <p className="certScore" style={{ 
+                    fontSize: '64px', 
+                    margin: 0, 
+                    color: textColor,
+                    textShadow: textShadow
+                  }}>
+                    {result.score}
+                    <span style={{ 
+                      fontSize: '24px', 
+                      color: subTextColor,
+                      textShadow: smallTextShadow
+                    }}>점</span>
+                  </p>
+                  
+                  <div style={{ marginTop: '8px' }}>
+                    <p className="certRank" style={{ 
+                      fontSize: '24px', 
+                      margin: 0, 
+                      color: accentColor,
+                      display: 'block',
+                      backgroundColor: 'transparent',
+                      padding: '0',
+                      borderRadius: '0',
+                      boxShadow: 'none',
+                      fontWeight: 900,
+                      textShadow: textShadow
+                    }}>
+                      {rank}
+                    </p>
+                  </div>
                 </div>
 
               </div>
