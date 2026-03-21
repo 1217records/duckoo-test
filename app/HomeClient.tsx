@@ -351,7 +351,7 @@ export default function HomeClient() {
             ) : (
               <>
                 <div className="card-header bleach-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #f97316, #9a3412)' }}>웹툰/애니</span>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #f97316, #9a3412)' }}>만화/애니</span>
                   <h2 className="accordion-title">블리치 덕후 테스트</h2>
                 </div>
 

@@ -153,7 +153,7 @@ export default function AboutPage() {
               <p>전 세계를 휩쓴 K-웹툰/애니메이션의 전설! 성진우와 그림자 군단의 서사, 헌터 랭킹 및 세계관의 심층 지식을 검증합니다. 등급: E급 헌터 → C급 헌터 → A급 헌터 → S급 헌터 → 국가 권력급 → 그림자 군주</p>
             </div>
             <div className="theme-overview-item">
-              <div className="theme-overview-badge bleach-badge" style={{ background: 'linear-gradient(135deg, #f97316, #9a3412)', color: 'white' }}>NEW/애니</div>
+              <div className="theme-overview-badge bleach-badge" style={{ background: 'linear-gradient(135deg, #f97316, #9a3412)', color: 'white' }}>NEW/만화/애니</div>
               <h3>⚔️ 블리치 (Bleach)</h3>
               <p>만해(卍解)..! 사신, 아란칼, 퀸시가 격돌하는 블리치 세계관! 참백도 이름과 호정 13대의 디테일한 설정을 꿰뚫는 자를 가려냅니다. 등급: 사패장 소년 → 평대원 → 석관 → 부대장 → 호정 13대 대장 → 0번대 (왕속부대)</p>
             </div>

@@ -770,6 +770,18 @@ p {
     linear-gradient(135deg, #6d28d9, #312e81);
 }
 
+.accordion-card.expanded.bleach-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #f97316, #9a3412);
+}
+
+.accordion-card.expanded.lotr-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #eab308, #854d0e);
+}
+
 .accordion-card.expanded.mcu-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
