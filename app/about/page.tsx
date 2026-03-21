@@ -49,7 +49,7 @@ export default function AboutPage() {
 
         <section className="intro-hero">
           <h2>&ldquo;당신의 덕력은 어느 정도인가요?&rdquo;</h2>
-          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2, 나 혼자만 레벨업, 블리치, 마블 시네마틱 유니버스(MCU), 진격의 거인, 슬램덩크, 헌터x헌터 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
+          <p>덕후테스트는 누구나 손쉽게 자신의 &lsquo;덕력&rsquo;을 증명하고 서로 공유하며 즐길 수 있는 신개념 팬덤 검증 서비스입니다. 단순한 퀴즈를 넘어, 작품의 세계관과 스토리에 대한 심층적인 질문을 통해 진정한 마스터를 찾아냅니다. 원피스, 리그 오브 레전드, 강철의 연금술사, 포켓몬스터, 디아블로 2, 나 혼자만 레벨업, 블리치, 반지의 제왕, 마블 시네마틱 유니버스(MCU), 진격의 거인, 슬램덩크, 헌터x헌터 등을 시작으로 다양한 테마의 테스트가 지속적으로 추가되고 있습니다.</p>
         </section>
 
         {/* 서비스 철학 섹션 */}
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <section className="content-section card-base-styles">
           <h2>📚 현재 제공 중인 테스트 테마</h2>
           <p style={{ marginBottom: '24px', lineHeight: 1.8, color: 'var(--secondary-text-color)' }}>
-            현재 열한 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
+            현재 열두 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
           </p>
           <div className="theme-overview-list">
             <div className="theme-overview-item">
@@ -156,6 +156,11 @@ export default function AboutPage() {
               <div className="theme-overview-badge bleach-badge" style={{ background: 'linear-gradient(135deg, #f97316, #9a3412)', color: 'white' }}>NEW/애니</div>
               <h3>⚔️ 블리치 (Bleach)</h3>
               <p>만해(卍解)..! 사신, 아란칼, 퀸시가 격돌하는 블리치 세계관! 참백도 이름과 호정 13대의 디테일한 설정을 꿰뚫는 자를 가려냅니다. 등급: 사패장 소년 → 평대원 → 석관 → 부대장 → 호정 13대 대장 → 0번대 (왕속부대)</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge lotr-badge" style={{ background: 'linear-gradient(135deg, #eab308, #854d0e)', color: 'white' }}>NEW/영화</div>
+              <h3>💍 반지의 제왕 (LOTR)</h3>
+              <p>호빗부터 요정, 절대반지와 사우론까지! 방대한 중간계 세계관과 종족, 반지원정대의 여정을 가장 완벽하게 꿰뚫는 자를 찾습니다. 등급: 호빗 마을 주민 → 로한/곤도르의 병사 → 정예 요정 전사 → 반지원정대 일원 → 백색의 이스타리 → 반지의 제왕</p>
             </div>
             <div className="theme-overview-item">
               <div className="theme-overview-badge" style={{ background: 'linear-gradient(135deg, #ef4444, #991b1b)', color: 'white' }}>NEW/영화</div>
@@ -213,7 +218,7 @@ export default function AboutPage() {
 
           <div className="highlight-box">
             <p className="highlight-title">🌟 함께 만들어가는 플랫폼</p>
-            <p className="highlight-desc">팬 투표를 기반으로 꾸준히 새로운 작품(애니, 드라마, 게임) 테마가 추가됩니다. 현재 <strong>주술회전, 사이버펑크 엣지러너, 원신</strong> 테스트를 준비 중입니다. 여러분의 제안이 덕후테스트의 기출 문제가 됩니다.</p>
+            <p className="highlight-desc">팬 투표를 기반으로 꾸준히 새로운 작품(애니, 드라마, 게임) 테마가 추가됩니다. 현재 나루토, 해리포터, 주술회전 테스트를 준비 중입니다. 여러분의 제안이 덕후테스트의 기출 문제가 됩니다.</p>
           </div>
         </section>
 

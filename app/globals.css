@@ -670,6 +670,18 @@ p {
   filter: brightness(1.1);
 }
 
+/* Base button appearance for LOTR */
+.accordion-card:not(.expanded).lotr-card {
+  background: linear-gradient(135deg, #eab308, #854d0e);
+  box-shadow: 0 4px 14px rgba(202, 138, 4, 0.3);
+}
+
+.accordion-card:not(.expanded).lotr-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(202, 138, 4, 0.4);
+  filter: brightness(1.1);
+}
+
 /* Base button appearance for MCU */
 .accordion-card:not(.expanded).mcu-card {
   background: linear-gradient(135deg, #ef4444, #991b1b);

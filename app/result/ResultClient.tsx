@@ -127,6 +127,15 @@ function getRank(score: number, themeId: string): string {
     return "0번대 (왕속부대)";
   }
 
+  if (themeId === "lotr") {
+    if (score <= 24) return "호빗 마을 주민";
+    if (score <= 49) return "로한/곤도르의 병사";
+    if (score <= 69) return "정예 요정 전사";
+    if (score <= 84) return "반지원정대 일원";
+    if (score <= 94) return "백색의 이스타리";
+    return "반지의 제왕";
+  }
+
   // Default (One Piece)
   if (score <= 24) return "이스트 블루 루키";
   if (score <= 49) return "위대한 항로 모험가";
@@ -248,6 +257,20 @@ const THEME_META: Record<string, {
     otherThemes: [
       { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
       { id: "sololeveling", name: "나 혼자만 레벨업 덕후 테스트", emoji: "🗡️", desc: "성진우와 그림자 군단의 이야기!", color: "#4c1d95" },
+    ],
+  },
+  lotr: {
+    emoji: "💍",
+    color: "#ca8a04",
+    gradient: "linear-gradient(135deg, #eab308, #854d0e)",
+    hashtags: ["#반지의제왕덕후테스트", "#덕후테스트", "#반지의제왕", "#LOTR", "#절대반지"],
+    links: [
+      { label: "반지의 제왕 나무위키", url: "https://namu.wiki/w/%EB%B0%98%EC%A7%80%EC%9D%98%20%EC%A0%9C%EC%99%95", desc: "세계관 및 등장인물 상세" },
+      { label: "톨킨 게이트웨이", url: "https://tolkiengateway.net", desc: "해외 최대 톨킨 영문 팬덤 위키" },
+    ],
+    otherThemes: [
+      { id: "mcu", name: "마블 시네마틱 유니버스 테스트", emoji: "🦸", desc: "MCU 영화와 드라마 지식을 확인하세요.", color: "#d32f2f" },
+      { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
     ],
   },
   mcu: {
