@@ -658,6 +658,18 @@ p {
   filter: brightness(1.1);
 }
 
+/* Base button appearance for ORV */
+.accordion-card:not(.expanded).orv-card {
+  background: linear-gradient(135deg, #1e40af, #1e3a8a);
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.3);
+}
+
+.accordion-card:not(.expanded).orv-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4);
+  filter: brightness(1.1);
+}
+
 /* Base button appearance for Bleach */
 .accordion-card:not(.expanded).bleach-card {
   background: linear-gradient(135deg, #f97316, #9a3412);
@@ -768,6 +780,12 @@ p {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
     linear-gradient(135deg, #6d28d9, #312e81);
+}
+
+.accordion-card.expanded.orv-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 28%),
+    linear-gradient(135deg, #1e40af, #1e3a8a);
 }
 
 .accordion-card.expanded.bleach-card {

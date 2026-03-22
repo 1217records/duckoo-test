@@ -10,6 +10,7 @@ import { slamdunkTheme } from "./slamdunk";
 import { hxhTheme } from "./hxh";
 import { bleachTheme } from "./bleach";
 import { lotrTheme } from "./lotr";
+import { orvTheme } from "./orv";
 import type { Theme } from "./types";
 
 const themes: Record<string, Theme> = {
@@ -25,6 +26,7 @@ const themes: Record<string, Theme> = {
   [hxhTheme.id]: hxhTheme,
   [bleachTheme.id]: bleachTheme,
   [lotrTheme.id]: lotrTheme,
+  [orvTheme.id]: orvTheme,
 };
 
 export function getTheme(themeId: string): Theme | null {

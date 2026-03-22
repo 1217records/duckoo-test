@@ -40,7 +40,7 @@ export default function HomeClient() {
   const [activeTab, setActiveTab] = useState("추천");
   const tabs = ["추천", "만화/애니", "웹툰/애니", "게임", "영화"];
   const isTabVisible = (genre: string, themeId: string) => {
-    if (activeTab === "추천") return ["onepiece", "lol", "sololeveling", "mcu", "bleach", "lotr"].includes(themeId);
+    if (activeTab === "추천") return ["onepiece", "lol", "orv", "lotr"].includes(themeId);
     return activeTab === genre;
   };
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -369,6 +369,55 @@ export default function HomeClient() {
                   </div>
 
                   <button className="startButton sololeveling-btn" type="button" onClick={(e) => { e.stopPropagation(); startTest("sololeveling"); }}>
+                    <Play size={18} className="icon-left" />
+                    테스트 바로 시작
+                  </button>
+                </div>
+              </>
+            )}
+          </article>
+          )}
+
+          {/* Omniscient Reader Test Card */}
+          {isTabVisible("웹툰/애니", "orv") && (
+          <article
+            className={`themeCard highlighted-card accordion-card orv-card ${activeTheme === 'orv' ? 'expanded' : ''}`}
+            onClick={() => setActiveTheme(activeTheme === 'orv' ? null : 'orv')}
+            style={{ "--primary-color": "#1e3a8a" } as React.CSSProperties}
+          >
+            {activeTheme !== 'orv' ? (
+              <>
+                <Play size={18} className="icon-left" />
+                전지적 독자 시점 덕후 테스트
+              </>
+            ) : (
+              <>
+                <div className="card-header orv-header" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span className="chip" style={{ margin: 0, padding: '4px 8px', background: 'linear-gradient(135deg, #1e40af, #1e3a8a)' }}><BookOpen size={12} className="icon-left" />웹툰/애니</span>
+                  <h2 className="accordion-title">전지적 독자 시점 덕후 테스트</h2>
+                </div>
+
+                <div className="card-expanded-content">
+                  <p className="accordion-description">
+                    멸살법의 진정한 독자가 될 준비가 되셨나요? 성좌와 시나리오, 김독자 컴퍼니와 세계관의 깊은 지식을 테스트합니다.
+                  </p>
+                  <div className="accordion-info-box">
+                    <span className="info-icon">💡</span>
+                    <span className="info-text">
+                      방대한 문제 은행에서 <strong>무작위로 20문제</strong>가 출제되며, 난이도(상/중/하)에 따라 배점이 다릅니다.
+                    </span>
+                  </div>
+                  <div className="input-group" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      id="nickname-orv"
+                      className="nicknameInput"
+                      placeholder="인증서 닉네임 (예: 구원의 마왕)"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
+                    />
+                  </div>
+
+                  <button className="startButton orv-btn" style={{ background: 'linear-gradient(135deg, #1e40af, #1e3a8a)' }} type="button" onClick={(e) => { e.stopPropagation(); startTest("orv"); }}>
                     <Play size={18} className="icon-left" />
                     테스트 바로 시작
                   </button>

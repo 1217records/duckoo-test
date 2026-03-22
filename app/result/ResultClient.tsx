@@ -136,6 +136,15 @@ function getRank(score: number, themeId: string): string {
     return "반지의 제왕";
   }
 
+  if (themeId === "orv") {
+    if (score <= 24) return "하차한 독자";
+    if (score <= 49) return "일반 화신";
+    if (score <= 69) return "상위 랭커 화신";
+    if (score <= 84) return "역사급 성좌";
+    if (score <= 94) return "신화급 성좌";
+    return "가장 오래된 꿈 (구원의 마왕)";
+  }
+
   // Default (One Piece)
   if (score <= 24) return "이스트 블루 루키";
   if (score <= 49) return "위대한 항로 모험가";
@@ -257,6 +266,20 @@ const THEME_META: Record<string, {
     otherThemes: [
       { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
       { id: "sololeveling", name: "나 혼자만 레벨업 덕후 테스트", emoji: "🗡️", desc: "성진우와 그림자 군단의 이야기!", color: "#4c1d95" },
+    ],
+  },
+  orv: {
+    emoji: "📖",
+    color: "#1e3a8a",
+    gradient: "linear-gradient(135deg, #1e40af, #1e3a8a)",
+    hashtags: ["#전독시테스트", "#덕후테스트", "#전지적독자시점", "#ORV", "#김독자컴퍼니"],
+    links: [
+      { label: "전독시 나무위키", url: "https://namu.wiki/w/%EC%A0%84%EC%A7%80%EC%A0%81%20%EB%8F%85%EC%9E%90%20%EC%8B%9C%EC%A0%90", desc: "전지적 독자 시점 세계관 상세" },
+      { label: "네이버 웹툰 전독시", url: "https://comic.naver.com/webtoon/list?titleId=747269", desc: "웹툰 전지적 독자 시점 공식 홈페이지" },
+    ],
+    otherThemes: [
+      { id: "sololeveling", name: "나 혼자만 레벨업 덕후 테스트", emoji: "🗡️", desc: "성진우와 그림자 군단의 이야기!", color: "#4c1d95" },
+      { id: "onepiece", name: "원피스 덕후 테스트", emoji: "⛵", desc: "해적왕의 꿈! 원피스 세계관 지식을 검증합니다.", color: "#4f46e5" },
     ],
   },
   lotr: {

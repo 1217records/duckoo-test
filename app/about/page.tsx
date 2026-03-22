@@ -118,9 +118,12 @@ export default function AboutPage() {
         {/* 테스트 주제 소개 */}
         <section className="content-section card-base-styles">
           <h2>📚 현재 제공 중인 테스트 테마</h2>
-          <p style={{ marginBottom: '24px', lineHeight: 1.8, color: 'var(--secondary-text-color)' }}>
-            현재 열두 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
-          </p>
+          <div className="theme-overview-info">
+            <h2>운영 중인 테마: <strong>총 13개</strong></h2>
+            <p>
+            현재 열세 가지 테마의 테스트가 운영 중이며, 각 테마는 수십 개의 문항으로 구성된 방대한 문제 은행을 보유하고 있습니다. 매 테스트마다 20문제가 무작위로 출제되어 반복 도전의 재미를 제공합니다.
+            </p>
+          </div>
           <div className="theme-overview-list">
             <div className="theme-overview-item">
               <div className="theme-overview-badge onepiece-badge"><BookOpen size={12} style={{marginRight: "4px", marginBottom: "-1px"}} />만화/애니</div>
@@ -151,6 +154,11 @@ export default function AboutPage() {
               <div className="theme-overview-badge sololeveling-badge" style={{ background: 'linear-gradient(135deg, #6d28d9, #312e81)', color: 'white' }}><BookOpen size={12} style={{marginRight: "4px", marginBottom: "-1px"}} />웹툰/애니</div>
               <h3>🗡️ 나 혼자만 레벨업 (Solo Leveling)</h3>
               <p>전 세계를 휩쓴 K-웹툰/애니메이션의 전설! 성진우와 그림자 군단의 서사, 헌터 랭킹 및 세계관의 심층 지식을 검증합니다. 등급: E급 헌터 → C급 헌터 → A급 헌터 → S급 헌터 → 국가 권력급 → 그림자 군주</p>
+            </div>
+            <div className="theme-overview-item">
+              <div className="theme-overview-badge orv-badge" style={{ background: 'linear-gradient(135deg, #1e40af, #1e3a8a)', color: 'white' }}><BookOpen size={12} style={{marginRight: "4px", marginBottom: "-1px"}} />웹툰/애니</div>
+              <h3>📖 전지적 독자 시점 (Omniscient Reader's Viewpoint)</h3>
+              <p>멸망한 세계에서 살아남는 세 가지 방법을 다 읽은 유일한 독자. 성좌와 시나리오, 멸살법 설정의 모든 것을 파고드는 K-웹소설/웹툰의 마스터피스. 등급: 하차한 독자 → 일반 화신 → 상위 랭커 화신 → 역사급 성좌 → 신화급 성좌 → 가장 오래된 꿈 (구원의 마왕)</p>
             </div>
             <div className="theme-overview-item">
               <div className="theme-overview-badge bleach-badge" style={{ background: 'linear-gradient(135deg, #f97316, #9a3412)', color: 'white' }}><BookOpen size={12} style={{marginRight: "4px", marginBottom: "-1px"}} />만화/애니</div>
