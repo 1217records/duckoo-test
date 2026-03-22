@@ -803,6 +803,19 @@ export default function ResultClient() {
     nameBoxBorder = "rgba(6, 182, 212, 0.8)";
     textShadow = "0 0 12px rgba(0,0,0,1), 0 0 24px rgba(6, 182, 212, 0.8)";
     smallTextShadow = "0 0 8px rgba(0,0,0,1), 0 0 16px rgba(6, 182, 212, 0.6)";
+  } else if (result.themeId === "orv") {
+    hasImageBg = true;
+    certBorderColor = "transparent";
+    certBg = "none";
+    watermarkBg = "transparent";
+    watermarkOpacity = 0;
+    accentColor = "#93c5fd";
+    textColor = "#ffffff";
+    subTextColor = "#bfdbfe";
+    nameBoxBg = "rgba(15, 23, 42, 0.7)";
+    nameBoxBorder = "rgba(147, 197, 253, 0.8)";
+    textShadow = "0 0 12px rgba(0,0,0,1), 0 0 24px rgba(147, 197, 253, 0.8)";
+    smallTextShadow = "0 0 8px rgba(0,0,0,1), 0 0 16px rgba(147, 197, 253, 0.6)";
   }
   
   let certBgImageUrl = "";
@@ -818,6 +831,7 @@ export default function ResultClient() {
   else if (result.themeId === "hxh") certBgImageUrl = "/images/hxh_cert_bg.png?v=1";
   else if (result.themeId === "lotr") certBgImageUrl = "/images/lotr_cert_bg.png?v=1";
   else if (result.themeId === "bleach") certBgImageUrl = "/images/bleach_cert_bg.png?v=1";
+  else if (result.themeId === "orv") certBgImageUrl = "/images/orv_cert_bg.png?v=1";
 
   return (
     <div className="shell result-shell">
