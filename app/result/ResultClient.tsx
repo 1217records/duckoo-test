@@ -870,6 +870,7 @@ export default function ResultClient() {
                 }}
               >
                 {hasImageBg && (
+                  /* eslint-disable-next-line @next/next/no-img-element */
                   <img 
                     src={certBgImageUrl} 
                     alt="Certificate Background" 

@@ -157,7 +157,7 @@ export default function AboutPage() {
             </div>
             <div className="theme-overview-item">
               <div className="theme-overview-badge orv-badge" style={{ background: 'linear-gradient(135deg, #1e40af, #1e3a8a)', color: 'white' }}><BookOpen size={12} style={{marginRight: "4px", marginBottom: "-1px"}} />웹툰/애니</div>
-              <h3>📖 전지적 독자 시점 (Omniscient Reader's Viewpoint)</h3>
+              <h3>📖 전지적 독자 시점 (Omniscient Reader&apos;s Viewpoint)</h3>
               <p>멸망한 세계에서 살아남는 세 가지 방법을 다 읽은 유일한 독자. 성좌와 시나리오, 멸살법 설정의 모든 것을 파고드는 K-웹소설/웹툰의 마스터피스. 등급: 하차한 독자 → 일반 화신 → 상위 랭커 화신 → 역사급 성좌 → 신화급 성좌 → 가장 오래된 꿈 (구원의 마왕)</p>
             </div>
             <div className="theme-overview-item">
