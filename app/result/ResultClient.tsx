@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState, useRef } from "react";
 import { Download, MessageCircle, Instagram, Twitter, Share2, ClipboardCheck, ExternalLink, BookOpen, Play, Hash, Anchor, Skull } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { useToast } from '../Toast';
+import { getTheme } from "@/lib/tests/registry";
 
 const SITE_URL = "https://duckootest.pages.dev";
 const DEFAULT_PLAYER_NAME = "익명 덕후";
@@ -364,33 +365,59 @@ export default function ResultClient() {
   const [nameDraft, setNameDraft] = useState("");
   const searchParams = useSearchParams();
   const themeId = searchParams.get("theme") ?? "onepiece";
+  const paramScore = searchParams.get("score");
+  const paramName = searchParams.get("name");
   const certificateRef = useRef<HTMLDivElement>(null);
   const [certScale, setCertScale] = useState(1);
   const { showToast } = useToast();
 
   useEffect(() => {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) {
-      setLoaded(true);
-      return;
+    let foundLocal = false;
+    if (raw) {
+      try {
+        const parsed = JSON.parse(raw) as SavedResult;
+        if (parsed.themeId === themeId) {
+          const normalizedPlayer = parsed.player?.trim() || DEFAULT_PLAYER_NAME;
+          setResult({
+            ...parsed,
+            player: normalizedPlayer,
+          });
+          setNameDraft(normalizedPlayer);
+          foundLocal = true;
+        }
+      } catch {
+        // parsing error
+      }
     }
 
-    try {
-      const parsed = JSON.parse(raw) as SavedResult;
-      if (parsed.themeId === themeId) {
-        const normalizedPlayer = parsed.player?.trim() || DEFAULT_PLAYER_NAME;
+    if (!foundLocal && paramScore) {
+      const parsedScore = parseInt(paramScore, 10);
+      if (!isNaN(parsedScore)) {
+        const theme = getTheme(themeId) || { name: THEME_META[themeId]?.hashtags[2]?.replace('#', '') || "덕후 테스트" };
+        const fallbackName = paramName || DEFAULT_PLAYER_NAME;
         setResult({
-          ...parsed,
-          player: normalizedPlayer,
+          themeId: themeId,
+          themeName: theme.name,
+          player: fallbackName,
+          score: parsedScore,
+          correct: 0,
+          rawPoints: 0,
+          totalPoints: 0,
+          totalCount: 0,
+          review: [],
         });
-        setNameDraft(normalizedPlayer);
+        setNameDraft(fallbackName);
+        foundLocal = true;
       }
-    } catch {
+    }
+
+    if (!foundLocal) {
       setResult(null);
     }
 
     setLoaded(true);
-  }, [themeId]);
+  }, [themeId, paramScore, paramName]);
 
   useEffect(() => {
     if (!loaded) return;
@@ -417,10 +444,12 @@ export default function ResultClient() {
     return result.review.filter((item) => item.selectedIndex !== item.answerIndex);
   }, [result]);
 
-  const shareUrl = `${SITE_URL}/result?theme=${themeId}`;
+  const shareUrl = result
+    ? `${SITE_URL}/result?theme=${themeId}&score=${result.score}&name=${encodeURIComponent(result.player)}`
+    : `${SITE_URL}/result?theme=${themeId}`;
   const shareText = result ? `[${result.themeName}] ${result.player} 님은 ${result.score}점 (${getRank(result.score, result.themeId)}) 달성!` : "";
   const shareTitle = "덕후테스트 결과";
-  const shareDescription = result ? `${result.totalCount}문제 중 ${result.correct}개 정답! 나도 도전하기 →` : "";
+  const shareDescription = result ? `${result.totalCount > 0 ? `${result.totalCount}문제 중 ${result.correct}개 정답! ` : ''}나도 도전하기 →` : "";
 
   const updatePlayerName = (nextDraft: string) => {
     setNameDraft(nextDraft);
@@ -433,7 +462,10 @@ export default function ResultClient() {
         player: normalizedPlayer,
       };
 
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextResult));
+      // 파라미터 기반으로 들어온 유저는 localStorage에 전체 정보가 없으므로 review가 빈 배열인지 확인
+      if (nextResult.review.length > 0) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(nextResult));
+      }
       localStorage.setItem("duckoo-player-name", normalizedPlayer);
 
       return nextResult;
@@ -1130,7 +1162,11 @@ export default function ResultClient() {
           {/* 오답 노트 */}
           <section className="reviewSection">
             <h3>오답 노트</h3>
-            {wrongAnswers.length === 0 ? (
+            {result.totalCount === 0 ? (
+              <div className="perfect-score card-base-styles">
+                <p className="lead">결과 상세(오답 노트)는 기기 보안 상 본인만 확인할 수 있습니다. 테스트를 직접 플레이해서 내 덕력을 검증해보세요!</p>
+              </div>
+            ) : wrongAnswers.length === 0 ? (
               <div className="perfect-score card-base-styles">
                 <p className="lead">틀린 문제가 없습니다! 완벽한 마스터입니다. 🎉</p>
               </div>

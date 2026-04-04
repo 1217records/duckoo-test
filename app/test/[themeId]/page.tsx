@@ -36,5 +36,33 @@ export default async function TestPage({ params }: Props) {
   const theme = getTheme(themeId);
   if (!theme) notFound();
 
-  return <TestClient theme={theme} />;
+  // 구글 봇에게 퀴즈 문제들을 그대로 읽게 해주는 JSON-LD
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": theme.name,
+    "description": theme.seo.description,
+    "hasPart": theme.questions.map((q) => ({
+      "@type": "Question",
+      "name": q.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": q.options[q.answerIndex]
+      },
+      "suggestedAnswer": q.options.map((opt) => ({
+        "@type": "Answer",
+        "text": opt
+      }))
+    }))
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <TestClient theme={theme} />
+    </>
+  );
 }

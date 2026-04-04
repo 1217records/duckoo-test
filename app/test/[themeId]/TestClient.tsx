@@ -63,7 +63,7 @@ export default function TestClient({ theme }: { theme: Theme }) {
     };
 
     localStorage.setItem(STORAGE.result, JSON.stringify(payload));
-    router.push(`/result?theme=${theme.id}`);
+    router.push(`/result?theme=${theme.id}&score=${result.score}&name=${encodeURIComponent(player)}`);
   };
 
   return (
